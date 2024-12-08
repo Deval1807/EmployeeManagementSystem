@@ -1,5 +1,6 @@
 package com.deval.ems.model;
 
+import java.time.LocalDate;
 import java.util.Date;
 import java.util.List;
 
@@ -8,17 +9,17 @@ public class Employee {
     private String name;
     private String departmentName;
     private int phone;
-    private Date date;
+    private LocalDate joiningDate;
     private Double salary;
     private List<String> projectList;
 
     // Constructor
-    public Employee(int empId, String name, String departmentName, int phone, Date date, Double salary, List<String> projectList) {
+    public Employee(int empId, String name, String departmentName, int phone, LocalDate joiningDate, Double salary, List<String> projectList) {
         this.empId = empId;
         this.name = name;
         this.departmentName = departmentName;
         this.phone = phone;
-        this.date = date;
+        this.joiningDate = joiningDate;
         this.salary = salary;
         this.projectList = projectList;
     }
@@ -57,12 +58,12 @@ public class Employee {
         this.phone = phone;
     }
 
-    public Date getDate() {
-        return date;
+    public LocalDate getJoiningDate() {
+        return joiningDate;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setJoiningDate(LocalDate joiningDate) {
+        this.joiningDate = joiningDate;
     }
 
     public Double getSalary() {
@@ -80,4 +81,18 @@ public class Employee {
     public void setProjectList(List<String> projectList) {
         this.projectList = projectList;
     }
+
+    // toString method to display/print the object
+    public String toString() {
+        return "Employee{" +
+                "empId=" + empId +
+                ", name='" + name + '\'' +
+                ", departmentName='" + departmentName + '\'' +
+                ", phone=" + phone +
+                ", joiningDate=" + joiningDate +
+                ", salary=" + salary +
+                ", projectList=" + projectList +
+                '}';
+    }
+
 }
