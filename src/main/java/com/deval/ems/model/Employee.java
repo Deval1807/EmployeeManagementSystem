@@ -1,20 +1,38 @@
 package com.deval.ems.model;
 
+import jakarta.validation.constraints.*;
+
 import java.time.LocalDate;
-import java.util.Date;
 import java.util.List;
 
 public class Employee {
     private int empId;
+
+    @NotBlank(message = "Name is required")
+    @Size(min = 2, max = 30, message = "Name must be between 2 to 30 characters")
     private String name;
+
+    @NotBlank(message = "Department name is required")
+    @Size(min = 2, max = 40, message = "Department name must be between 2 to 40 characters")
     private String departmentName;
-    private int phone;
+
+    @NotBlank(message = "Phone number is required")
+    @Size(min = 10, max = 10, message = "Phone number must be a valid 10-digit number")
+    private String phone;
+
+    @NotNull(message = "Salary is required")
+    @PastOrPresent(message = "Joining Date must be in past or present")
     private LocalDate joiningDate;
+
+    @NotNull(message = "Salary is required")
+    @Positive(message = "Salary must be greater than zero")
     private Double salary;
+
+    @NotNull(message = "Project list is required")
     private List<String> projectList;
 
     // Constructor
-    public Employee(int empId, String name, String departmentName, int phone, LocalDate joiningDate, Double salary, List<String> projectList) {
+    public Employee(int empId, String name, String departmentName, String phone, LocalDate joiningDate, Double salary, List<String> projectList) {
         this.empId = empId;
         this.name = name;
         this.departmentName = departmentName;
@@ -50,11 +68,11 @@ public class Employee {
         this.departmentName = departmentName;
     }
 
-    public int getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(int phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 

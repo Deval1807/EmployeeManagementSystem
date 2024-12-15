@@ -2,6 +2,7 @@ package com.deval.ems.controller;
 
 import com.deval.ems.model.Employee;
 import com.deval.ems.service.EmployeeService;
+import jakarta.validation.Valid;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -33,7 +34,7 @@ public class EmployeeController {
 
     // Add a new employee
     @PostMapping()
-    public Employee addEmployee(@RequestBody Employee newEmployee) {
+    public Employee addEmployee(@Valid @RequestBody Employee newEmployee) {
 //        System.out.println("New employee added");
 //        System.out.println(newEmployee.toString());
 //        return null;
@@ -42,7 +43,7 @@ public class EmployeeController {
 
     // Edit employee detail
     @PutMapping("/{id}")
-    public Employee updateEmployee(@PathVariable int id, @RequestBody Employee updatedEmployee) throws Exception {
+    public Employee updateEmployee(@PathVariable int id, @Valid @RequestBody Employee updatedEmployee) throws Exception {
 //        System.out.println("Update employee with ID: "+ id);
 //        System.out.println(updatedEmployee.toString());
 //        return null;
