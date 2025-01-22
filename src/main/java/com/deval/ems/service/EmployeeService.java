@@ -52,7 +52,7 @@ public class EmployeeService {
     }
 
     // Add a new employee
-    public Employee addEmployee(Employee newEmployee) {
+    public String addEmployee(Employee newEmployee) {
         // set the id to current id and add it to our hash map
 //        newEmployee.setEmpId(currentId);
 //        employeeDetails.put(currentId, newEmployee);
@@ -94,7 +94,7 @@ public class EmployeeService {
         existingEmployee.setJoining_date(updatedEmployee.getJoining_date());
         existingEmployee.setSalary(updatedEmployee.getSalary());
 
-        return employeeDAO.save(existingEmployee);
+        return employeeDAO.update(existingEmployee);
     }
 
     // Delete an employee by id

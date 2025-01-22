@@ -41,7 +41,7 @@ public class EmployeeController {
 
     // Add a new employee
     @PostMapping()
-    public Employee addEmployee(@Valid @RequestBody Employee newEmployee) {
+    public String addEmployee(@Valid @RequestBody Employee newEmployee) {
 //        System.out.println("New employee added");
 //        System.out.println(newEmployee.toString());
 //        return null;
