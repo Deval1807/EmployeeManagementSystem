@@ -7,8 +7,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
-import java.util.HashMap;
+import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
 
@@ -67,7 +66,7 @@ public class EmployeeService {
     }
 
     // Edit an employee by id
-    public Employee editEmployee(int id, Employee updatedEmployee) throws Exception {
+    public Employee editEmployee(int id, Map<String, Object> updates) throws Exception {
         // check if the ID exists
 //        if(!employeeDetails.containsKey(id)) {
 //            logger.error("Employee not found with ID: {} while editing employee",id);
@@ -87,12 +86,28 @@ public class EmployeeService {
             return new Exception("Employee not found with ID: " + id);
         });
 
-        // Update fields
-        existingEmployee.setName(updatedEmployee.getName());
-        existingEmployee.setDepartment_id(updatedEmployee.getDepartment_id());
-        existingEmployee.setPhone(updatedEmployee.getPhone());
-        existingEmployee.setJoining_date(updatedEmployee.getJoining_date());
-        existingEmployee.setSalary(updatedEmployee.getSalary());
+        // Update only the required fields
+        updates.forEach((key, value) -> {
+            switch (key) {
+                case "name":
+                    existingEmployee.setName((String) value);
+                    break;
+                case "department_id":
+                    existingEmployee.setDepartment_id((Integer) value);
+                    break;
+                case "phone":
+                    existingEmployee.setPhone((String) value);
+                    break;
+                case "joining_date":
+                    existingEmployee.setJoining_date(LocalDate.parse((String) value));
+                    break;
+                case "salary":
+                    existingEmployee.setSalary(Double.parseDouble(value.toString()));
+                    break;
+                default:
+                    logger.warn("Unknown field: {}. Skipping update for it.", key);
+            }
+        });
 
         return employeeDAO.update(existingEmployee);
     }

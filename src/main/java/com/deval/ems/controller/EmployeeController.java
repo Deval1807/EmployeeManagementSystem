@@ -9,6 +9,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController         // Define class as a rest controller
 @RequestMapping("/api/employees")
@@ -50,13 +51,13 @@ public class EmployeeController {
     }
 
     // Edit employee detail
-    @PutMapping("/{id}")
-    public Employee updateEmployee(@PathVariable int id, @Valid @RequestBody Employee updatedEmployee) throws Exception {
+    @PatchMapping("/{id}")
+    public Employee updateEmployee(@PathVariable int id, @Valid @RequestBody Map<String, Object> updates) throws Exception {
 //        System.out.println("Update employee with ID: "+ id);
 //        System.out.println(updatedEmployee.toString());
 //        return null;
         logger.info("Updating an existing employee with id: {}",id);
-        return employeeService.editEmployee(id, updatedEmployee);
+        return employeeService.editEmployee(id, updates);
     }
 
     // Delete an employee
