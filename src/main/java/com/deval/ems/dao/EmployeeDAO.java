@@ -42,7 +42,6 @@ public class EmployeeDAO {
     public Optional<Employee> findById(int id) {
         String sql = "SELECT * FROM employees WHERE emp_id = ?";
         List<Employee> result = jdbcTemplate.query(sql, new EmployeeRowMapper(), id);
-        System.out.println("result: "+ result);
         return result.isEmpty() ? Optional.empty() : Optional.of(result.get(0));
     }
 

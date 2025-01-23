@@ -1,5 +1,6 @@
 package com.deval.ems.controller;
 
+import com.deval.ems.dto.EmployeeDTO;
 import com.deval.ems.model.Employee;
 import com.deval.ems.service.EmployeeService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -26,7 +27,7 @@ public class EmployeeController {
 
     // Get all the employees
     @GetMapping()
-    public List<Employee> getEmployees() {
+    public List<EmployeeDTO> getEmployees() {
 //        System.out.println("Get all employees");
 //        return null;
         logger.info("Fetching all the employees");
@@ -35,7 +36,7 @@ public class EmployeeController {
 
     // Get an employee by ID
     @GetMapping("/{id}")
-    public Employee getEmployee(@PathVariable int id) throws Exception {
+    public EmployeeDTO getEmployee(@PathVariable int id) throws Exception {
 //        System.out.println("Get an employee by ID: "+ id);
 //        return null;
         logger.info("Fetching employee with id: {}",id);
@@ -54,7 +55,7 @@ public class EmployeeController {
 
     // Edit employee detail
     @PatchMapping("/{id}")
-    public Employee updateEmployee(@PathVariable int id, @Valid @RequestBody Map<String, Object> updates) throws Exception {
+    public EmployeeDTO updateEmployee(@PathVariable int id, @Valid @RequestBody Map<String, Object> updates) throws Exception {
 //        System.out.println("Update employee with ID: "+ id);
 //        System.out.println(updatedEmployee.toString());
 //        return null;

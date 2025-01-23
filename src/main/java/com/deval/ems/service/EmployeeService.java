@@ -1,7 +1,9 @@
 package com.deval.ems.service;
 
 import com.deval.ems.dao.EmployeeDAO;
+import com.deval.ems.dto.EmployeeDTO;
 import com.deval.ems.model.Employee;
+import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +12,8 @@ import org.springframework.stereotype.Service;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class EmployeeService {
@@ -24,16 +28,25 @@ public class EmployeeService {
     @Autowired
     private EmployeeDAO employeeDAO;
 
+    @Autowired
+    private ModelMapper modelMapper;
+
     // Get all the employees
-    public List<Employee> getEmployees() {
+    public List<EmployeeDTO> getEmployees() {
         // return all the employees in an array form
 //        return new ArrayList<>(employeeDetails.values());
         logger.info("Querying DB to find all employees");
-        return employeeDAO.findAll();
+        // Fetch the list of employees from DAO
+        List<Employee> employees = employeeDAO.findAll();
+
+        // Map the list of Employee entities to EmployeeDTOs
+        return employees.stream()
+                .map(employee -> modelMapper.map(employee, EmployeeDTO.class))
+                .collect(Collectors.toList());
     }
 
     // Get an employee by ID
-    public Employee getEmployeeById(int id) throws Exception {
+    public EmployeeDTO getEmployeeById(int id) throws Exception {
 
         // check if the ID exists
 //        if(!employeeDetails.containsKey(id)) {
@@ -43,10 +56,16 @@ public class EmployeeService {
 //        return employeeDetails.get(id);
 
         logger.info("Fetching employee with ID: {} from DB", id);
-        return employeeDAO.findById(id).orElseThrow(() -> {
-            logger.error("Employee not found with ID: {}", id);
-            return new Exception("Employee not found with ID: " + id);
-        });
+//        return employeeDAO.findById(id).orElseThrow(() -> {
+//            logger.error("Employee not found with ID: {}", id);
+//            return new Exception("Employee not found with ID: " + id);
+//        });
+
+        Optional<Employee> employee = employeeDAO.findById(id);
+
+        logger.error("Employee not found with ID: {}", id);
+
+        return modelMapper.map(employee, EmployeeDTO.class);
 
     }
 
@@ -66,7 +85,7 @@ public class EmployeeService {
     }
 
     // Edit an employee by id
-    public Employee editEmployee(int id, Map<String, Object> updates) throws Exception {
+    public EmployeeDTO editEmployee(int id, Map<String, Object> updates) throws Exception {
         // check if the ID exists
 //        if(!employeeDetails.containsKey(id)) {
 //            logger.error("Employee not found with ID: {} while editing employee",id);
@@ -109,7 +128,8 @@ public class EmployeeService {
             }
         });
 
-        return employeeDAO.update(existingEmployee);
+        Employee employee = employeeDAO.update(existingEmployee);
+        return modelMapper.map(employee, EmployeeDTO.class);
     }
 
     // Delete an employee by id
