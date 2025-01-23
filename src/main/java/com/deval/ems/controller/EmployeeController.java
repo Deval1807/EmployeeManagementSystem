@@ -2,6 +2,7 @@ package com.deval.ems.controller;
 
 import com.deval.ems.model.Employee;
 import com.deval.ems.service.EmployeeService;
+import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,6 +12,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.Map;
 
+@Tag(name = "Employee", description = "Simple APIs for Employee Management System")
 @RestController         // Define class as a rest controller
 @RequestMapping("/api/employees")
 public class EmployeeController {
