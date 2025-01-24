@@ -7,11 +7,13 @@ import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.time.LocalDate;
 import java.util.List;
 import java.util.Map;
+import java.util.NoSuchElementException;
 import java.util.Optional;
 import java.util.stream.Collectors;
 
@@ -46,7 +48,7 @@ public class EmployeeService {
     }
 
     // Get an employee by ID
-    public EmployeeDTO getEmployeeById(int id) throws Exception {
+    public EmployeeDTO getEmployeeById(int id){
 
         // check if the ID exists
 //        if(!employeeDetails.containsKey(id)) {
@@ -61,9 +63,10 @@ public class EmployeeService {
 //            return new Exception("Employee not found with ID: " + id);
 //        });
 
-        Optional<Employee> employee = employeeDAO.findById(id);
-
-        logger.error("Employee not found with ID: {}", id);
+        Employee employee = employeeDAO.findById(id).orElseThrow(() -> {
+            logger.error("Employee not found with ID: {}", id);
+            return new NoSuchElementException("Employee with ID " + id + " not found.");
+        });
 
         return modelMapper.map(employee, EmployeeDTO.class);
 
@@ -80,12 +83,18 @@ public class EmployeeService {
 //
 //        return newEmployee;
 
-        logger.info("Adding a new employee to the database");
-        return employeeDAO.save(newEmployee);
+
+        try {
+            logger.info("Adding a new employee to the database");
+            return employeeDAO.save(newEmployee); // This will throw an exception if the phone is duplicate
+        } catch (DataIntegrityViolationException e) {
+            logger.error("Error occurred while adding a new employee to database");
+            throw e; // Let the global exception handler manage this
+        }
     }
 
     // Edit an employee by id
-    public EmployeeDTO editEmployee(int id, Map<String, Object> updates) throws Exception {
+    public EmployeeDTO editEmployee(int id, Map<String, Object> updates)  {
         // check if the ID exists
 //        if(!employeeDetails.containsKey(id)) {
 //            logger.error("Employee not found with ID: {} while editing employee",id);
@@ -102,7 +111,7 @@ public class EmployeeService {
 
         Employee existingEmployee = employeeDAO.findById(id).orElseThrow(() -> {
             logger.error("Employee not found with ID: {}", id);
-            return new Exception("Employee not found with ID: " + id);
+            return new NoSuchElementException("Employee with ID " + id + " not found.");
         });
 
         // Update only the required fields
@@ -128,8 +137,15 @@ public class EmployeeService {
             }
         });
 
-        Employee employee = employeeDAO.update(existingEmployee);
-        return modelMapper.map(employee, EmployeeDTO.class);
+        try {
+            logger.info("Updating employee to the database");
+            Employee employee = employeeDAO.update(existingEmployee);
+            return modelMapper.map(employee, EmployeeDTO.class);
+        } catch (DataIntegrityViolationException e) {
+            logger.error("Error occurred while updating the employee to database");
+            throw e; // Let the global exception handler manage this
+        }
+
     }
 
     // Delete an employee by id
@@ -146,7 +162,7 @@ public class EmployeeService {
 
         Employee existingEmployee = employeeDAO.findById(id).orElseThrow(() -> {
             logger.error("Employee not found with ID: {}", id);
-            return new Exception("Employee not found with ID: " + id);
+            return new NoSuchElementException("Employee with ID " + id + " not found.");
         });
 
         employeeDAO.delete(existingEmployee);
