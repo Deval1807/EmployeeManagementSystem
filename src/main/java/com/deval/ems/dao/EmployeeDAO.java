@@ -17,7 +17,9 @@ public class EmployeeDAO {
     @Autowired
     private JdbcTemplate jdbcTemplate;
 
-    // RowMapper to map ResultSet to Employee object
+    /**
+     * This method maps the ResultSet(result from SQL operation) to Employee object
+     */
     private static final class EmployeeRowMapper implements RowMapper<Employee> {
         @Override
         public Employee mapRow(ResultSet rs, int rowNum) throws SQLException {
@@ -32,20 +34,31 @@ public class EmployeeDAO {
         }
     }
 
-    // Find all employees
+    /**
+     * This method queries the DB and find all the employees
+     * @return List of Employee objects
+     */
     public List<Employee> findAll() {
         String sql = "SELECT * FROM employees";
         return jdbcTemplate.query(sql, new EmployeeRowMapper());
     }
 
-    // Find employee by ID
+    /**
+     * This method queries the DB to find an employee by id
+     * @param id id of employee to be found
+     * @return Optional Employee object
+     */
     public Optional<Employee> findById(int id) {
         String sql = "SELECT * FROM employees WHERE emp_id = ?";
         List<Employee> result = jdbcTemplate.query(sql, new EmployeeRowMapper(), id);
         return result.isEmpty() ? Optional.empty() : Optional.of(result.get(0));
     }
 
-    // Save a new employee
+    /**
+     * This method queries DB to add a new employee
+     * @param employee Employee object - new employee details to be added
+     * @return A string message (success or failure)
+     */
     public String save(Employee employee) {
         String sql = "INSERT INTO employees (name, department_id, phone, joining_date, salary) VALUES (?, ?, ?, ?, ?)";
 
@@ -61,7 +74,11 @@ public class EmployeeDAO {
     }
 
 
-    // Update an existing employee
+    /**
+     * This method queries DB to update an employee by id
+     * @param employee Employee object - updated employee details
+     * @returns updated Employee object
+     */
     public Employee update(Employee employee) {
         String sql = "UPDATE employees SET name = ?, department_id = ?, phone = ?, joining_date = ?, salary = ? WHERE emp_id = ?";
         jdbcTemplate.update(sql, employee.getName(), employee.getDepartment_id(), employee.getPhone(),
@@ -70,7 +87,10 @@ public class EmployeeDAO {
         return employee;
     }
 
-    // Delete an employee
+    /**
+     * This method queries DB to delete an employee by id
+     * @param employee Employee object
+     */
     public void delete(Employee employee) {
         String sql = "DELETE FROM employees WHERE emp_id = ?";
         jdbcTemplate.update(sql, employee.getEmp_id());

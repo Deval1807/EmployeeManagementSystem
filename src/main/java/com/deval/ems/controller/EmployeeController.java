@@ -25,45 +25,55 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    // Get all the employees
+    /**
+     * Retrieves the details of all employees
+     * @return List of EmployeeDTO object representing all employees
+     */
     @GetMapping()
     public List<EmployeeDTO> getEmployees() {
-//        System.out.println("Get all employees");
-//        return null;
         logger.info("Fetching all the employees");
         return employeeService.getEmployees();
     }
 
-    // Get an employee by ID
+    /**
+     * Retrieves employee details by employee id
+     * @param id The id of employee to be retrieved
+     * @return EmployeeDTO object representing the employee with given id
+     */
     @GetMapping("/{id}")
     public EmployeeDTO getEmployee(@PathVariable int id) throws Exception {
-//        System.out.println("Get an employee by ID: "+ id);
-//        return null;
         logger.info("Fetching employee with id: {}",id);
         return employeeService.getEmployeeById(id);
     }
 
-    // Add a new employee
+    /**
+     * Adds a new employee
+     * @param newEmployee Employee object representing new employee
+     * @return String message indicating result (success or failure)
+     */
     @PostMapping()
     public String addEmployee(@Valid @RequestBody Employee newEmployee) {
-//        System.out.println("New employee added");
-//        System.out.println(newEmployee.toString());
-//        return null;
         logger.info("Adding a new employee");
         return employeeService.addEmployee(newEmployee);
     }
 
-    // Edit employee detail
+    /**
+     * Updates an employee by id
+     * @param id The id of the employee to be updated
+     * @param updates A map (key-value pair) ot employee fields to be updated
+     * @return EmployeeDTO object representing updated employee
+     */
     @PatchMapping("/{id}")
     public EmployeeDTO updateEmployee(@PathVariable int id, @Valid @RequestBody Map<String, Object> updates) throws Exception {
-//        System.out.println("Update employee with ID: "+ id);
-//        System.out.println(updatedEmployee.toString());
-//        return null;
         logger.info("Updating an existing employee with id: {}",id);
         return employeeService.editEmployee(id, updates);
     }
 
-    // Delete an employee
+    /**
+     * Deletes an employee by id
+     * @param id The id of the employee to be deleted
+     * @return A message of success or throws error
+     */
     @DeleteMapping("/{id}")
     public String deleteEmployee(@PathVariable int id) throws Exception {
         employeeService.deleteEmployee(id);

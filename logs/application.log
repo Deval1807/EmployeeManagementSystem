@@ -634,3 +634,55 @@ java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1234554327' 
 2025-01-24T11:26:18.190+05:30  INFO 25564 --- [ems] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-24T11:26:18.193+05:30  INFO 25564 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-24T11:26:18.201+05:30  INFO 25564 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-24T15:04:48.507+05:30  INFO 28285 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 28285 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-24T15:04:48.509+05:30  INFO 28285 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-24T15:04:48.971+05:30  INFO 28285 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-24T15:04:48.983+05:30  INFO 28285 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-01-24T15:04:49.278+05:30  INFO 28285 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-24T15:04:49.287+05:30  INFO 28285 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-24T15:04:49.287+05:30  INFO 28285 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-24T15:04:49.316+05:30  INFO 28285 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-24T15:04:49.316+05:30  INFO 28285 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 776 ms
+2025-01-24T15:04:49.376+05:30  INFO 28285 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-24T15:04:49.620+05:30  INFO 28285 --- [ems] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e76afeb
+2025-01-24T15:04:49.621+05:30  INFO 28285 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-24T15:04:49.663+05:30  INFO 28285 --- [ems] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-24T15:04:49.694+05:30  INFO 28285 --- [ems] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-24T15:04:49.711+05:30  INFO 28285 --- [ems] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-24T15:04:49.859+05:30  INFO 28285 --- [ems] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-24T15:04:49.919+05:30  INFO 28285 --- [ems] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-24T15:04:50.333+05:30  INFO 28285 --- [ems] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-24T15:04:50.335+05:30  INFO 28285 --- [ems] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: attribute paths.'/api/employees'(get).responses is missing
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: attribute paths.'/api/employees'(post).responses is missing
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: attribute paths.'/api/employees/{id}'(get).responses is missing
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: attribute paths.'/api/employees/{id}'(delete).responses is missing
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: attribute paths.'/api/employees/{id}'(patch).responses is missing
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: The provided definition does not specify a valid version field
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: paths.'/api/employees/{id}'. Declared path parameter id needs to be defined as a path parameter in path or operation level
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: paths.'/api/employees/{id}'. Declared path parameter id needs to be defined as a path parameter in path or operation level
+2025-01-24T15:04:50.645+05:30  INFO 28285 --- [ems] [main] io.swagger.v3.parser.OpenAPIV3Parser     : io.swagger.v3.parser.OpenAPIV3Parser@6dd7af2f: paths.'/api/employees/{id}'. Declared path parameter id needs to be defined as a path parameter in path or operation level
+2025-01-24T15:04:50.704+05:30  WARN 28285 --- [ems] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-24T15:04:50.933+05:30  INFO 28285 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-24T15:04:50.939+05:30  INFO 28285 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 2.687 seconds (process running for 2.923)
+2025-01-24T15:04:54.662+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-24T15:04:54.663+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-24T15:04:54.663+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-01-24T15:04:54.704+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : Fetching all the employees
+2025-01-24T15:04:54.704+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-01-24T15:05:08.761+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.EmployeeService    : Deleting employee with ID: 3 in the DB
+2025-01-24T15:05:08.772+05:30 ERROR 28285 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.EmployeeService    : Employee not found with ID: 3
+2025-01-24T15:05:13.638+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-4] com.deval.ems.service.EmployeeService    : Deleting employee with ID: 12 in the DB
+2025-01-24T15:05:13.652+05:30  INFO 28285 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : Deleting employee with id: 12
+2025-01-24T15:05:18.500+05:30  INFO 28285 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-24T15:05:18.506+05:30  INFO 28285 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-24T15:05:18.510+05:30  INFO 28285 --- [ems] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-24T15:05:18.517+05:30  INFO 28285 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-24T15:05:18.526+05:30  INFO 28285 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
