@@ -1,6 +1,7 @@
 package com.deval.ems.config;
 
 import com.deval.ems.dto.EmployeeDTO;
+import com.deval.ems.dto.UpdateEmployeeDTO;
 import com.deval.ems.model.Employee;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
@@ -21,6 +22,19 @@ public class ModelMapperConfig {
             mapper.map(Employee::getDepartment_id,
                     EmployeeDTO::setDepartmentId);
         });
+
+        // to map from UpdateEmployeeDTO to Employee
+        modelMapper.typeMap(UpdateEmployeeDTO.class, Employee.class).addMappings(mapper -> {
+            mapper.map(UpdateEmployeeDTO::getDepartmentId,
+                    Employee::setDepartment_id);
+            mapper.map(UpdateEmployeeDTO::getJoiningDate,
+                    Employee::setJoining_date);
+        });
+
+        // Skip null values during mapping
+        // When converting from UpdateEmployeeDTO to Employee
+        // There can many fields with null value
+        modelMapper.getConfiguration().setSkipNullEnabled(true);
 
         return modelMapper;
     }

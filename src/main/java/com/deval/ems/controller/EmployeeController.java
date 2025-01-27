@@ -1,6 +1,7 @@
 package com.deval.ems.controller;
 
 import com.deval.ems.dto.EmployeeDTO;
+import com.deval.ems.dto.UpdateEmployeeDTO;
 import com.deval.ems.model.Employee;
 import com.deval.ems.service.EmployeeService;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -60,13 +61,13 @@ public class EmployeeController {
     /**
      * Updates an employee by id
      * @param id The id of the employee to be updated
-     * @param updates A map (key-value pair) ot employee fields to be updated
+     * @param updateEmployeeDTO UpdateEmployeeDTO object of employee fields to be updated
      * @return EmployeeDTO object representing updated employee
      */
     @PatchMapping("/{id}")
-    public EmployeeDTO updateEmployee(@PathVariable int id, @Valid @RequestBody Map<String, Object> updates) throws Exception {
+    public EmployeeDTO updateEmployee(@PathVariable int id, @RequestBody UpdateEmployeeDTO updateEmployeeDTO) throws Exception {
         logger.info("Updating an existing employee with id: {}",id);
-        return employeeService.editEmployee(id, updates);
+        return employeeService.editEmployee(id, updateEmployeeDTO);
     }
 
     /**

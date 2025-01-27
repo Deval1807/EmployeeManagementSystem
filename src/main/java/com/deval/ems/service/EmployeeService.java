@@ -2,6 +2,7 @@ package com.deval.ems.service;
 
 import com.deval.ems.dao.EmployeeDAO;
 import com.deval.ems.dto.EmployeeDTO;
+import com.deval.ems.dto.UpdateEmployeeDTO;
 import com.deval.ems.model.Employee;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
@@ -85,10 +86,10 @@ public class EmployeeService {
      * Edits the employee details of given id.
      * Only edits the specified fields, and it's not necessary to provide all the fields.
      * @param id id of the employee to be updated
-     * @param updates A map (key-value pair) ot employee fields to be updated
+     * @param updateEmployeeDTO UpdateEmployeeDTO object of employee fields to be updated
      * @return EmployeeDTO object of the updated employee
      */
-    public EmployeeDTO editEmployee(int id, Map<String, Object> updates)  {
+    public EmployeeDTO editEmployee(int id, UpdateEmployeeDTO updateEmployeeDTO)  {
         logger.info("Editing employee with ID: {} in the DB", id);
 
         Employee existingEmployee = employeeDAO.findById(id).orElseThrow(() -> {
@@ -96,28 +97,8 @@ public class EmployeeService {
             return new NoSuchElementException("Employee with ID " + id + " not found.");
         });
 
-        // Update only the required fields
-        updates.forEach((key, value) -> {
-            switch (key) {
-                case "name":
-                    existingEmployee.setName((String) value);
-                    break;
-                case "department_id":
-                    existingEmployee.setDepartment_id((Integer) value);
-                    break;
-                case "phone":
-                    existingEmployee.setPhone((String) value);
-                    break;
-                case "joining_date":
-                    existingEmployee.setJoining_date(LocalDate.parse((String) value));
-                    break;
-                case "salary":
-                    existingEmployee.setSalary(Double.parseDouble(value.toString()));
-                    break;
-                default:
-                    logger.warn("Unknown field: {}. Skipping update for it.", key);
-            }
-        });
+        // Map only non-null fields from DTO to the entity
+        modelMapper.map(updateEmployeeDTO, existingEmployee);
 
         try {
             logger.info("Updating employee to the database");
