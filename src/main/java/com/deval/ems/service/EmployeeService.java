@@ -68,10 +68,12 @@ public class EmployeeService {
     /**
      * This method attempts to add a new employee and handles any data integrity issues,
      * such as duplicate phone numbers
-     * @param newEmployee Employee object
+     * @param newEmployeeDTO UpdateEmployeeDTO object
      * @return A message indicating the result of the operation (success or failure).
      */
-    public String addEmployee(Employee newEmployee) {
+    public String addEmployee(UpdateEmployeeDTO newEmployeeDTO) {
+
+        Employee newEmployee = modelMapper.map(newEmployeeDTO, Employee.class);
 
         try {
             logger.info("Adding a new employee to the database");
