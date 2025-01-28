@@ -46,7 +46,11 @@ public class GlobalExceptionHandler {
     public ResponseEntity<Map<String, String>> handleDataIntegrityViolation(DataIntegrityViolationException ex) {
         Map<String, String> errorResponse = new HashMap<>();
         String message = ex.getMostSpecificCause().getMessage();
-        errorResponse.put("error", "Database integrity error: " + message);
+        if(message.contains("Duplicate entry")) {
+            errorResponse.put("error", "Database integrity error: Phone number already exists. Please enter a new phone number");
+        }else {
+            errorResponse.put("error", "Database integrity error: Make sure you have entered valid data");
+        }
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
 }

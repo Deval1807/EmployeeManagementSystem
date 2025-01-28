@@ -123,7 +123,14 @@ public class EmployeeController {
             @ApiResponse(
                     responseCode = "400",
                     description = "Bad Request",
-                    content = @Content()
+                    content = {
+                            @Content(
+                                    mediaType = "application/jons",
+                                    schema = @Schema(
+                                            example = "{\"error\": \"Database integrity error: Phone number already exists. Please enter a new phone number\"}"
+                                    )
+                            )
+                    }
             )
     })
     @PostMapping()
@@ -158,7 +165,14 @@ public class EmployeeController {
             @ApiResponse(
                     responseCode = "400",
                     description = "Bad Request",
-                    content = @Content()
+                    content = {
+                            @Content(
+                                    mediaType = "application/jons",
+                                    schema = @Schema(
+                                            example = "{\"error\": \"Database integrity error: Phone number already exists. Please enter a new phone number\"}"
+                                    )
+                            )
+                    }
             ),
             @ApiResponse(
                     responseCode = "404",
