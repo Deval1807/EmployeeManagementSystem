@@ -11,9 +11,11 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import java.lang.reflect.InvocationTargetException;
 import java.time.LocalDate;
 import java.util.List;
 import java.util.NoSuchElementException;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -117,7 +119,7 @@ public class EmployeeService {
      * @param employeeDetailsDTO UpdateEmployeeDTO object of employee fields to be updated
      * @return EmployeeDTO object of the updated employee
      */
-    public EmployeeDTO editEmployee(int id, EmployeeDetailsDTO employeeDetailsDTO)  {
+    public EmployeeDTO editEmployee(int id, EmployeeDetailsDTO employeeDetailsDTO) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
 
         if(employeeDetailsDTO.getName()!=null && employeeDetailsDTO.getName().length()<2) {
             throw new DataIntegrityViolationException("Name has to be at least 2 characters long");
@@ -139,16 +141,20 @@ public class EmployeeService {
             return new NoSuchElementException("Employee with ID " + id + " not found.");
         });
 
-        // Map only non-null fields from DTO to the entity
-        modelMapper.map(employeeDetailsDTO, existingEmployee);
+        logger.info("Updating employee to the database");
 
-        try {
-            logger.info("Updating employee to the database");
-            Employee employee = employeeDAO.update(existingEmployee);
-            return modelMapper.map(employee, EmployeeDTO.class);
-        } catch (DataIntegrityViolationException e) {
-            logger.error("Error occurred while updating the employee to database");
-            throw e;
+        // Update employee and get the result as an Optional
+        Optional<Employee> employeeOptional = employeeDAO.update(existingEmployee, employeeDetailsDTO);
+
+        // Check if the employee is present in the Optional
+        if (employeeOptional.isEmpty()) {
+            // If empty, throw an exception
+            logger.error("Error occurred while updating the employee to database: Employee not found or update failed");
+            throw new DataIntegrityViolationException("Employee update failed or employee not found.");
+        } else {
+            // If the employee is present, map it to EmployeeDTO and return
+            Employee updatedEmployee = employeeOptional.get();
+            return modelMapper.map(updatedEmployee, EmployeeDTO.class);
         }
 
     }

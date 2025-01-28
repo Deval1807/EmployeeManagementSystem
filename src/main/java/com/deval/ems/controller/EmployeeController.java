@@ -17,6 +17,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
 @Tag(name = "Employee", description = "Simple APIs for Employee Management System")
@@ -185,7 +186,7 @@ public class EmployeeController {
             )
     })
     @PatchMapping("/{id}")
-    public EmployeeDTO updateEmployee(@PathVariable int id, @RequestBody EmployeeDetailsDTO employeeDetailsDTO){
+    public EmployeeDTO updateEmployee(@PathVariable int id, @RequestBody EmployeeDetailsDTO employeeDetailsDTO) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
         logger.info("Updating an existing employee with id: {}",id);
         return employeeService.editEmployee(id, employeeDetailsDTO);
     }

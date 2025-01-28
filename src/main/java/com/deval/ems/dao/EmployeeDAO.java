@@ -1,5 +1,6 @@
 package com.deval.ems.dao;
 
+import com.deval.ems.dto.EmployeeDetailsDTO;
 import com.deval.ems.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -8,6 +9,7 @@ import org.springframework.stereotype.Repository;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -76,15 +78,52 @@ public class EmployeeDAO {
 
     /**
      * This method queries DB to update an employee by id
+     *
      * @param employee Employee object - updated employee details
      * @returns updated Employee object
      */
-    public Employee update(Employee employee) {
-        String sql = "UPDATE employees SET name = ?, department_id = ?, phone = ?, joining_date = ?, salary = ? WHERE emp_id = ?";
-        jdbcTemplate.update(sql, employee.getName(), employee.getDepartment_id(), employee.getPhone(),
-                employee.getJoining_date(), employee.getSalary(), employee.getEmp_id());
+    public Optional<Employee> update(Employee employee, EmployeeDetailsDTO employeeDetailsDTO) {
+        // build the query dynamically
+        StringBuilder dynamicSql = new StringBuilder("UPDATE employees SET ");
 
-        return employee;
+        // store the parameter values
+        List<Object> params = new ArrayList<>();
+
+        if(employeeDetailsDTO.getName() != null) {
+            dynamicSql.append("name = ?, ");
+            params.add(employeeDetailsDTO.getName());
+        }
+        if (employeeDetailsDTO.getDepartmentId() != null) {
+            dynamicSql.append("department_id = ?, ");
+            params.add(employeeDetailsDTO.getDepartmentId());
+        }
+        if (employeeDetailsDTO.getPhone() != null) {
+            dynamicSql.append("phone = ?, ");
+            params.add(employeeDetailsDTO.getPhone());
+        }
+        if (employeeDetailsDTO.getJoiningDate() != null) {
+            dynamicSql.append("joining_date = ?, ");
+            params.add(employeeDetailsDTO.getJoiningDate());
+        }
+        if (employeeDetailsDTO.getSalary() != null) {
+            dynamicSql.append("salary = ?, ");
+            params.add(employeeDetailsDTO.getSalary());
+        }
+
+        // it will have extra comma and space
+        // so remove last 2 characters
+        dynamicSql.setLength(dynamicSql.length() - 2);
+
+        dynamicSql.append(" WHERE emp_id = ?");
+
+
+        // add the employee id to params list
+        params.add(employee.getEmp_id());
+
+        jdbcTemplate.update(dynamicSql.toString(), params.toArray());
+
+        return findById(employee.getEmp_id());
+
     }
 
     /**
