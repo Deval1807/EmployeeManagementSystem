@@ -2,7 +2,7 @@ package com.deval.ems.service;
 
 import com.deval.ems.dao.EmployeeDAO;
 import com.deval.ems.dto.EmployeeDTO;
-import com.deval.ems.dto.UpdateEmployeeDTO;
+import com.deval.ems.dto.EmployeeDetailsDTO;
 import com.deval.ems.model.Employee;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
@@ -11,11 +11,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
-import java.time.LocalDate;
 import java.util.List;
-import java.util.Map;
 import java.util.NoSuchElementException;
-import java.util.Optional;
 import java.util.stream.Collectors;
 
 @Service
@@ -71,7 +68,7 @@ public class EmployeeService {
      * @param newEmployeeDTO UpdateEmployeeDTO object
      * @return A message indicating the result of the operation (success or failure).
      */
-    public String addEmployee(UpdateEmployeeDTO newEmployeeDTO) {
+    public String addEmployee(EmployeeDetailsDTO newEmployeeDTO) {
 
         Employee newEmployee = modelMapper.map(newEmployeeDTO, Employee.class);
 
@@ -88,10 +85,10 @@ public class EmployeeService {
      * Edits the employee details of given id.
      * Only edits the specified fields, and it's not necessary to provide all the fields.
      * @param id id of the employee to be updated
-     * @param updateEmployeeDTO UpdateEmployeeDTO object of employee fields to be updated
+     * @param employeeDetailsDTO UpdateEmployeeDTO object of employee fields to be updated
      * @return EmployeeDTO object of the updated employee
      */
-    public EmployeeDTO editEmployee(int id, UpdateEmployeeDTO updateEmployeeDTO)  {
+    public EmployeeDTO editEmployee(int id, EmployeeDetailsDTO employeeDetailsDTO)  {
         logger.info("Editing employee with ID: {} in the DB", id);
 
         Employee existingEmployee = employeeDAO.findById(id).orElseThrow(() -> {
@@ -100,7 +97,7 @@ public class EmployeeService {
         });
 
         // Map only non-null fields from DTO to the entity
-        modelMapper.map(updateEmployeeDTO, existingEmployee);
+        modelMapper.map(employeeDetailsDTO, existingEmployee);
 
         try {
             logger.info("Updating employee to the database");

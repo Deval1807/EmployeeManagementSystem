@@ -1,7 +1,7 @@
 package com.deval.ems.config;
 
 import com.deval.ems.dto.EmployeeDTO;
-import com.deval.ems.dto.UpdateEmployeeDTO;
+import com.deval.ems.dto.EmployeeDetailsDTO;
 import com.deval.ems.model.Employee;
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;
@@ -24,10 +24,10 @@ public class ModelMapperConfig {
         });
 
         // to map from UpdateEmployeeDTO to Employee
-        modelMapper.typeMap(UpdateEmployeeDTO.class, Employee.class).addMappings(mapper -> {
-            mapper.map(UpdateEmployeeDTO::getDepartmentId,
+        modelMapper.typeMap(EmployeeDetailsDTO.class, Employee.class).addMappings(mapper -> {
+            mapper.map(EmployeeDetailsDTO::getDepartmentId,
                     Employee::setDepartment_id);
-            mapper.map(UpdateEmployeeDTO::getJoiningDate,
+            mapper.map(EmployeeDetailsDTO::getJoiningDate,
                     Employee::setJoining_date);
         });
 

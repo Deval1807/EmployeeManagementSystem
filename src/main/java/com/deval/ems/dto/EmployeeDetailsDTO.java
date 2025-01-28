@@ -7,7 +7,7 @@ import java.time.LocalDate;
 /**
  * DTO to handle the RequestBody for updating employee
  */
-public class UpdateEmployeeDTO {
+public class EmployeeDetailsDTO {
 
     @Schema(description = "name of the employee", example = "John Doe")
     private String name;
