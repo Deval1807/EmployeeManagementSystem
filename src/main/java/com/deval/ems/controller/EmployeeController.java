@@ -45,13 +45,17 @@ public class EmployeeController {
             @ApiResponse(
                     responseCode = "200",
                     description = "Successful retrieval of employee list",
-                    content = {
-                            @Content(
-                                    mediaType = "application/json",
-                                    array = @ArraySchema(schema = @Schema(implementation = EmployeeDTO.class))
+                    content = @Content(
+                            mediaType = "application/json",
+                            array = @ArraySchema(
+                                    schema = @Schema(
+                                            type = "object",
+                                            example = "{ \"name\": \"John Doe\", \"departmentId\": 1, \"joiningDate\": \"2021-01-21\" }"
+                                    )
                             )
-                    }
+                    )
             )
+
     })
     @GetMapping()
     public List<EmployeeDTO> getEmployees() {
@@ -77,7 +81,10 @@ public class EmployeeController {
                     content = {
                             @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = EmployeeDTO.class)
+                                    schema = @Schema(
+                                            type = "object",
+                                            example = "{ \"name\": \"John Doe\", \"departmentId\": 1, \"joiningDate\": \"2021-01-21\" }"
+                                    )
                             )
                     }
             ),
@@ -158,7 +165,10 @@ public class EmployeeController {
                     content = {
                             @Content(
                                     mediaType = "application/json",
-                                    schema = @Schema(implementation = EmployeeDTO.class)
+                                    schema = @Schema(
+                                            type = "object",
+                                            example = "{ \"name\": \"John Doe\", \"departmentId\": 1, \"joiningDate\": \"2021-01-21\" }"
+                                    )
                             )
                     }
             ),
@@ -186,7 +196,7 @@ public class EmployeeController {
             )
     })
     @PatchMapping("/{id}")
-    public EmployeeDTO updateEmployee(@PathVariable int id, @RequestBody EmployeeDetailsDTO employeeDetailsDTO) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+    public EmployeeDTO updateEmployee(@PathVariable int id, @RequestBody EmployeeDetailsDTO employeeDetailsDTO) {
         logger.info("Updating an existing employee with id: {}",id);
         return employeeService.editEmployee(id, employeeDetailsDTO);
     }

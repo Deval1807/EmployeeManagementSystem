@@ -119,7 +119,7 @@ public class EmployeeService {
      * @param employeeDetailsDTO UpdateEmployeeDTO object of employee fields to be updated
      * @return EmployeeDTO object of the updated employee
      */
-    public EmployeeDTO editEmployee(int id, EmployeeDetailsDTO employeeDetailsDTO) throws InvocationTargetException, IllegalAccessException, NoSuchMethodException {
+    public EmployeeDTO editEmployee(int id, EmployeeDetailsDTO employeeDetailsDTO){
 
         if(employeeDetailsDTO.getName()!=null && employeeDetailsDTO.getName().length()<2) {
             throw new DataIntegrityViolationException("Name has to be at least 2 characters long");

@@ -116,7 +116,6 @@ public class EmployeeDAO {
 
         dynamicSql.append(" WHERE emp_id = ?");
 
-
         // add the employee id to params list
         params.add(employee.getEmp_id());
 
