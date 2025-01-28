@@ -12,23 +12,10 @@ public class Employee {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int emp_id;
-
-    @NotBlank(message = "Name is required")
-    @Size(min = 2, max = 30, message = "Name must be between 2 to 30 characters")
     private String name;
-
     private int department_id;
-
-    @NotBlank(message = "Phone number is required")
-    @Size(min = 10, max = 10, message = "Phone number must be a valid 10-digit number")
     private String phone;
-
-    @NotNull(message = "joining date is required")
-    @PastOrPresent(message = "Joining Date must be in past or present")
     private LocalDate joining_date;
-
-    @NotNull(message = "Salary is required")
-    @Positive(message = "Salary must be greater than zero")
     private Double salary;
 
     // Constructor

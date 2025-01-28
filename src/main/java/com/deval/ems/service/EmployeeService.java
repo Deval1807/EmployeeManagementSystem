@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDate;
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.stream.Collectors;
@@ -70,6 +71,34 @@ public class EmployeeService {
      */
     public String addEmployee(EmployeeDetailsDTO newEmployeeDTO) {
 
+        if(newEmployeeDTO.getName() == null) {
+            throw new DataIntegrityViolationException("The 'name' field is required");
+        }
+        if(newEmployeeDTO.getName().length()<2) {
+            throw new DataIntegrityViolationException("Name has to be at least 2 characters long");
+        }
+        if(newEmployeeDTO.getDepartmentId() == null) {
+            throw new DataIntegrityViolationException("The 'departmentId' field is required");
+        }
+        if(newEmployeeDTO.getPhone() == null) {
+            throw new DataIntegrityViolationException("The 'phone' field is required");
+        }
+        if(newEmployeeDTO.getPhone().length()!=10) {
+            throw new DataIntegrityViolationException("Phone should have 10 digits");
+        }
+        if(newEmployeeDTO.getJoiningDate() == null) {
+            throw new DataIntegrityViolationException("The 'joiningDate' field is required");
+        }
+        if (newEmployeeDTO.getJoiningDate().isAfter(LocalDate.now())) {
+            throw new DataIntegrityViolationException("The 'joiningDate' must be in the past or present");
+        }
+        if(newEmployeeDTO.getSalary() == null) {
+            throw new DataIntegrityViolationException("The 'salary' field is required");
+        }
+        if (newEmployeeDTO.getSalary()<0) {
+            throw new DataIntegrityViolationException("Salary should be positive");
+        }
+
         Employee newEmployee = modelMapper.map(newEmployeeDTO, Employee.class);
 
         try {
@@ -89,6 +118,20 @@ public class EmployeeService {
      * @return EmployeeDTO object of the updated employee
      */
     public EmployeeDTO editEmployee(int id, EmployeeDetailsDTO employeeDetailsDTO)  {
+
+        if(employeeDetailsDTO.getName()!=null && employeeDetailsDTO.getName().length()<2) {
+            throw new DataIntegrityViolationException("Name has to be at least 2 characters long");
+        }
+        if(employeeDetailsDTO.getPhone()!=null && employeeDetailsDTO.getPhone().length()!=10) {
+            throw new DataIntegrityViolationException("Phone should have 10 digits");
+        }
+        if (employeeDetailsDTO.getJoiningDate()!=null && employeeDetailsDTO.getJoiningDate().isAfter(LocalDate.now())) {
+            throw new DataIntegrityViolationException("The 'joiningDate' must be in the past or present");
+        }
+        if (employeeDetailsDTO.getSalary()!=null && employeeDetailsDTO.getSalary()<0) {
+            throw new DataIntegrityViolationException("Salary should be positive");
+        }
+
         logger.info("Editing employee with ID: {} in the DB", id);
 
         Employee existingEmployee = employeeDAO.findById(id).orElseThrow(() -> {

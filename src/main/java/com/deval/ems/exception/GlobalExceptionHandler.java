@@ -49,7 +49,7 @@ public class GlobalExceptionHandler {
         if(message.contains("Duplicate entry")) {
             errorResponse.put("error", "Database integrity error: Phone number already exists. Please enter a new phone number");
         }else {
-            errorResponse.put("error", "Database integrity error: Make sure you have entered valid data");
+            errorResponse.put("error", message);
         }
         return new ResponseEntity<>(errorResponse, HttpStatus.BAD_REQUEST);
     }
