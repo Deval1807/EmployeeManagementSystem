@@ -1103,3 +1103,177 @@ java.lang.NullPointerException: Cannot invoke "String.length()" because the retu
 2025-01-28T11:25:45.713+05:30  INFO 46346 --- [ems] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
 2025-01-28T11:25:45.714+05:30  INFO 46346 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-01-28T11:25:45.717+05:30  INFO 46346 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-28T12:08:31.207+05:30  INFO 47065 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 47065 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-28T12:08:31.208+05:30  INFO 47065 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-28T12:08:31.660+05:30  INFO 47065 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-28T12:08:31.673+05:30  INFO 47065 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-01-28T12:08:31.948+05:30  INFO 47065 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-28T12:08:31.956+05:30  INFO 47065 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-28T12:08:31.956+05:30  INFO 47065 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-28T12:08:31.982+05:30  INFO 47065 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-28T12:08:31.982+05:30  INFO 47065 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 727 ms
+2025-01-28T12:08:32.040+05:30  INFO 47065 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-28T12:08:32.238+05:30  INFO 47065 --- [ems] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@252ec02e
+2025-01-28T12:08:32.239+05:30  INFO 47065 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-28T12:08:32.269+05:30  INFO 47065 --- [ems] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-28T12:08:32.298+05:30  INFO 47065 --- [ems] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-28T12:08:32.313+05:30  INFO 47065 --- [ems] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-28T12:08:32.442+05:30  INFO 47065 --- [ems] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-28T12:08:32.508+05:30  INFO 47065 --- [ems] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-28T12:08:32.929+05:30  INFO 47065 --- [ems] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-28T12:08:32.930+05:30  INFO 47065 --- [ems] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:08:33.174+05:30  WARN 47065 --- [ems] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-28T12:08:33.420+05:30  INFO 47065 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-28T12:08:33.425+05:30  INFO 47065 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 2.463 seconds (process running for 2.717)
+2025-01-28T12:08:38.891+05:30  INFO 47065 --- [ems] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-28T12:08:38.891+05:30  INFO 47065 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-28T12:08:38.892+05:30  INFO 47065 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-28T12:08:38.941+05:30  INFO 47065 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : Fetching employee with id: 1
+2025-01-28T12:08:38.941+05:30  INFO 47065 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Fetching employee with ID: 1 from DB
+2025-01-28T12:08:38.956+05:30 ERROR 47065 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Employee not found with ID: 1
+2025-01-28T12:17:58.868+05:30  WARN 47065 --- [ems] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=56s433ms).
+2025-01-28T12:18:38.392+05:30  INFO 47065 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-28T12:18:38.399+05:30  INFO 47065 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-28T12:18:38.404+05:30  INFO 47065 --- [ems] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:18:38.407+05:30  INFO 47065 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-28T12:18:38.415+05:30  INFO 47065 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-28T12:21:51.073+05:30  INFO 47227 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 47227 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-28T12:21:51.074+05:30  INFO 47227 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-28T12:21:51.574+05:30  INFO 47227 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-28T12:21:51.587+05:30  INFO 47227 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-01-28T12:21:51.893+05:30  INFO 47227 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-28T12:21:51.901+05:30  INFO 47227 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-28T12:21:51.901+05:30  INFO 47227 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-28T12:21:51.931+05:30  INFO 47227 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-28T12:21:51.931+05:30  INFO 47227 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 811 ms
+2025-01-28T12:21:52.000+05:30  INFO 47227 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-28T12:21:52.226+05:30  INFO 47227 --- [ems] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41f964f9
+2025-01-28T12:21:52.227+05:30  INFO 47227 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-28T12:21:52.259+05:30  INFO 47227 --- [ems] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-28T12:21:52.293+05:30  INFO 47227 --- [ems] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-28T12:21:52.308+05:30  INFO 47227 --- [ems] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-28T12:21:52.455+05:30  INFO 47227 --- [ems] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-28T12:21:52.510+05:30  INFO 47227 --- [ems] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-28T12:21:52.934+05:30  INFO 47227 --- [ems] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-28T12:21:52.936+05:30  INFO 47227 --- [ems] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:21:53.177+05:30  WARN 47227 --- [ems] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-28T12:21:53.435+05:30  INFO 47227 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-28T12:21:53.441+05:30  INFO 47227 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 2.653 seconds (process running for 3.293)
+2025-01-28T12:21:56.657+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-28T12:21:56.658+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-28T12:21:56.658+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-01-28T12:21:56.708+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : Fetching employee with id: 1
+2025-01-28T12:21:56.709+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Fetching employee with ID: 1 from DB
+2025-01-28T12:21:56.717+05:30 ERROR 47227 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Employee not found with ID: 1
+2025-01-28T12:23:17.749+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : Fetching employee with id: 1
+2025-01-28T12:23:39.978+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-5] com.deval.ems.service.EmployeeService    : Fetching employee with ID: 1 from DB
+2025-01-28T12:25:10.549+05:30 ERROR 47227 --- [ems] [http-nio-8080-exec-5] com.deval.ems.service.EmployeeService    : Employee not found with ID: 1
+2025-01-28T12:26:03.444+05:30  WARN 47227 --- [ems] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=52s899ms).
+2025-01-28T12:26:11.805+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-7] c.d.ems.controller.EmployeeController    : Fetching employee with id: 1
+2025-01-28T12:26:28.203+05:30  INFO 47227 --- [ems] [http-nio-8080-exec-7] com.deval.ems.service.EmployeeService    : Fetching employee with ID: 1 from DB
+2025-01-28T12:27:21.544+05:30  WARN 47227 --- [ems] [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m18s100ms).
+2025-01-28T12:27:31.905+05:30 ERROR 47227 --- [ems] [http-nio-8080-exec-7] com.deval.ems.service.EmployeeService    : Employee not found with ID: 1
+2025-01-28T12:28:13.070+05:30  INFO 47227 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-28T12:28:13.079+05:30  INFO 47227 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-28T12:28:13.084+05:30  INFO 47227 --- [ems] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:28:13.088+05:30  INFO 47227 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-28T12:28:13.095+05:30  INFO 47227 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-28T12:51:19.288+05:30  INFO 47942 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 47942 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-28T12:51:19.290+05:30  INFO 47942 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-28T12:51:19.743+05:30  INFO 47942 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-28T12:51:19.755+05:30  INFO 47942 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 7 ms. Found 0 JPA repository interfaces.
+2025-01-28T12:51:20.042+05:30  INFO 47942 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-28T12:51:20.050+05:30  INFO 47942 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-28T12:51:20.050+05:30  INFO 47942 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-28T12:51:20.077+05:30  INFO 47942 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-28T12:51:20.077+05:30  INFO 47942 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 745 ms
+2025-01-28T12:51:20.144+05:30  INFO 47942 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-28T12:51:20.342+05:30  INFO 47942 --- [ems] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6cbb7a7d
+2025-01-28T12:51:20.343+05:30  INFO 47942 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-28T12:51:20.374+05:30  INFO 47942 --- [ems] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-28T12:51:20.404+05:30  INFO 47942 --- [ems] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-28T12:51:20.420+05:30  INFO 47942 --- [ems] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-28T12:51:20.552+05:30  INFO 47942 --- [ems] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-28T12:51:20.609+05:30  INFO 47942 --- [ems] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-28T12:51:20.928+05:30  INFO 47942 --- [ems] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.deval.ems.model.Employee (class must be instantiated by Interceptor)
+2025-01-28T12:51:21.012+05:30  INFO 47942 --- [ems] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-28T12:51:21.013+05:30  INFO 47942 --- [ems] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:51:21.248+05:30  WARN 47942 --- [ems] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-28T12:51:21.479+05:30  INFO 47942 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-28T12:51:21.488+05:30  INFO 47942 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 2.451 seconds (process running for 2.688)
+2025-01-28T12:51:50.838+05:30  INFO 47942 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-28T12:51:50.838+05:30  INFO 47942 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-28T12:51:50.840+05:30  INFO 47942 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-28T12:51:50.891+05:30  INFO 47942 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : Fetching all the employees
+2025-01-28T12:51:50.891+05:30  INFO 47942 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-01-28T12:53:25.432+05:30  INFO 47942 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-28T12:53:25.439+05:30  INFO 47942 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-28T12:53:25.447+05:30  INFO 47942 --- [ems] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:53:25.450+05:30  INFO 47942 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-28T12:53:25.461+05:30  INFO 47942 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-28T12:53:27.652+05:30  INFO 47993 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 47993 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-28T12:53:27.653+05:30  INFO 47993 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-28T12:53:28.098+05:30  INFO 47993 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-01-28T12:53:28.109+05:30  INFO 47993 --- [ems] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 6 ms. Found 0 JPA repository interfaces.
+2025-01-28T12:53:28.384+05:30  INFO 47993 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-28T12:53:28.391+05:30  INFO 47993 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-28T12:53:28.391+05:30  INFO 47993 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-28T12:53:28.418+05:30  INFO 47993 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-28T12:53:28.418+05:30  INFO 47993 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 719 ms
+2025-01-28T12:53:28.479+05:30  INFO 47993 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-28T12:53:28.717+05:30  INFO 47993 --- [ems] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@65cc5252
+2025-01-28T12:53:28.719+05:30  INFO 47993 --- [ems] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-28T12:53:28.752+05:30  INFO 47993 --- [ems] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-01-28T12:53:28.776+05:30  INFO 47993 --- [ems] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.2.Final
+2025-01-28T12:53:28.790+05:30  INFO 47993 --- [ems] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-01-28T12:53:28.912+05:30  INFO 47993 --- [ems] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-01-28T12:53:28.970+05:30  INFO 47993 --- [ems] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.4.3
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-01-28T12:53:29.280+05:30  INFO 47993 --- [ems] [main] o.h.m.i.EntityInstantiatorPojoStandard   : HHH000182: No default (no-argument) constructor for class: com.deval.ems.model.Employee (class must be instantiated by Interceptor)
+2025-01-28T12:53:29.361+05:30  INFO 47993 --- [ems] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-01-28T12:53:29.363+05:30  INFO 47993 --- [ems] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:53:29.591+05:30  WARN 47993 --- [ems] [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2025-01-28T12:53:29.820+05:30  INFO 47993 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-28T12:53:29.829+05:30  INFO 47993 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 2.42 seconds (process running for 2.649)
+2025-01-28T12:53:33.160+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-28T12:53:33.161+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-28T12:53:33.161+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-01-28T12:53:33.209+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : Fetching all the employees
+2025-01-28T12:53:33.209+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-01-28T12:53:39.293+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : Fetching employee with id: 1
+2025-01-28T12:53:39.294+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.EmployeeService    : Fetching employee with ID: 1 from DB
+2025-01-28T12:53:39.308+05:30 ERROR 47993 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.EmployeeService    : Employee not found with ID: 1
+2025-01-28T12:53:42.090+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : Fetching employee with id: 2
+2025-01-28T12:53:42.091+05:30  INFO 47993 --- [ems] [http-nio-8080-exec-4] com.deval.ems.service.EmployeeService    : Fetching employee with ID: 2 from DB
+2025-01-28T12:55:14.794+05:30  INFO 47993 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-28T12:55:14.801+05:30  INFO 47993 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-28T12:55:14.807+05:30  INFO 47993 --- [ems] [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-01-28T12:55:14.810+05:30  INFO 47993 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-28T12:55:14.817+05:30  INFO 47993 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
