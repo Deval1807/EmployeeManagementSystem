@@ -896,3 +896,188 @@ java.lang.NoSuchMethodException: com.deval.ems.model.Employee.<init>()
 2025-01-29T11:21:39.116+05:30  INFO 57718 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.491 seconds (process running for 1.736)
 2025-01-29T11:21:49.183+05:30  INFO 57718 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
 2025-01-29T11:21:49.191+05:30  INFO 57718 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-29T11:26:44.874+05:30  INFO 57900 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 57900 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-29T11:26:44.876+05:30  INFO 57900 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-29T11:26:45.545+05:30  INFO 57900 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-29T11:26:45.553+05:30  INFO 57900 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-29T11:26:45.553+05:30  INFO 57900 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-29T11:26:45.580+05:30  INFO 57900 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-29T11:26:45.580+05:30  INFO 57900 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 657 ms
+2025-01-29T11:26:46.063+05:30  INFO 57900 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-29T11:26:46.068+05:30  INFO 57900 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.437 seconds (process running for 1.65)
+2025-01-29T11:26:50.862+05:30  INFO 57900 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-29T11:26:50.862+05:30  INFO 57900 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-29T11:26:50.863+05:30  INFO 57900 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-29T11:26:51.141+05:30  INFO 57900 --- [ems] [http-nio-8080-exec-4] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 150 ms
+2025-01-29T11:40:28.736+05:30  INFO 57900 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-29T11:40:28.743+05:30  INFO 57900 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-29T14:10:27.220+05:30  INFO 59614 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 59614 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-29T14:10:27.222+05:30  INFO 59614 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-29T14:10:27.893+05:30  INFO 59614 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-29T14:10:27.903+05:30  INFO 59614 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-29T14:10:27.903+05:30  INFO 59614 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-29T14:10:27.927+05:30  INFO 59614 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-29T14:10:27.928+05:30  INFO 59614 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 656 ms
+2025-01-29T14:10:28.426+05:30  INFO 59614 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-29T14:10:28.431+05:30  INFO 59614 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.453 seconds (process running for 1.679)
+2025-01-29T14:10:35.389+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-29T14:10:35.390+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-29T14:10:35.391+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-29T14:10:35.411+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : Fetching all the employees
+2025-01-29T14:10:35.411+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-01-29T14:10:35.415+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-29T14:10:35.731+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67d3de8
+2025-01-29T14:10:35.732+05:30  INFO 59614 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-29T14:10:42.241+05:30 ERROR 59614 --- [ems] [http-nio-8080-exec-3] o.a.c.c.C.[.[.[/].[dispatcherServlet]    : Servlet.service() for servlet [dispatcherServlet] in context with path [] threw exception [Request processing failed: jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.NotBlank' validating type 'java.lang.Integer'. Check configuration for 'departmentId'] with root cause
+
+jakarta.validation.UnexpectedTypeException: HV000030: No validator could be found for constraint 'jakarta.validation.constraints.NotBlank' validating type 'java.lang.Integer'. Check configuration for 'departmentId'
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getExceptionForNullValidator(ConstraintTree.java:116) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.getInitializedConstraintValidator(ConstraintTree.java:162) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.SimpleConstraintTree.validateConstraints(SimpleConstraintTree.java:58) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.constraintvalidation.ConstraintTree.validateConstraints(ConstraintTree.java:75) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.doValidateConstraint(MetaConstraint.java:130) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.metadata.core.MetaConstraint.validateConstraint(MetaConstraint.java:123) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateMetaConstraint(ValidatorImpl.java:555) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForSingleDefaultGroupElement(ValidatorImpl.java:518) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForDefaultGroup(ValidatorImpl.java:488) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateConstraintsForCurrentGroup(ValidatorImpl.java:450) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validateInContext(ValidatorImpl.java:400) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.hibernate.validator.internal.engine.ValidatorImpl.validate(ValidatorImpl.java:172) ~[hibernate-validator-8.0.1.Final.jar:8.0.1.Final]
+	at org.springframework.validation.beanvalidation.SpringValidatorAdapter.validate(SpringValidatorAdapter.java:105) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.boot.autoconfigure.validation.ValidatorAdapter.validate(ValidatorAdapter.java:67) ~[spring-boot-autoconfigure-3.4.0.jar:3.4.0]
+	at org.springframework.validation.DataBinder.validate(DataBinder.java:1358) ~[spring-context-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodArgumentResolver.validateIfApplicable(AbstractMessageConverterMethodArgumentResolver.java:291) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:157) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:224) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:178) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:986) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:891) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:978) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1014) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885) ~[spring-webmvc-6.2.0.jar:6.2.0]
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658) ~[tomcat-embed-core-10.1.33.jar:6.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:195) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51) ~[tomcat-embed-websocket-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116) ~[spring-web-6.2.0.jar:6.2.0]
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:164) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:140) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:167) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:483) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:344) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:397) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:905) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1741) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1190) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:63) ~[tomcat-embed-core-10.1.33.jar:10.1.33]
+	at java.base/java.lang.Thread.run(Thread.java:1575) ~[na:na]
+
+2025-01-29T14:11:44.371+05:30  INFO 59614 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-29T14:11:44.376+05:30  INFO 59614 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-29T14:11:44.379+05:30  INFO 59614 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-29T14:11:44.383+05:30  INFO 59614 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-29T14:11:46.252+05:30  INFO 59636 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 59636 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-29T14:11:46.253+05:30  INFO 59636 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-29T14:11:46.896+05:30  INFO 59636 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-29T14:11:46.904+05:30  INFO 59636 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-29T14:11:46.905+05:30  INFO 59636 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-29T14:11:46.936+05:30  INFO 59636 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-29T14:11:46.937+05:30  INFO 59636 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 629 ms
+2025-01-29T14:11:47.408+05:30  INFO 59636 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-29T14:11:47.414+05:30  INFO 59636 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.401 seconds (process running for 1.609)
+2025-01-29T14:11:55.067+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-29T14:11:55.068+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-29T14:11:55.068+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-01-29T14:11:55.164+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : Adding a new employee
+2025-01-29T14:11:55.167+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-01-29T14:11:55.169+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-29T14:11:55.398+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@335fecf7
+2025-01-29T14:11:55.399+05:30  INFO 59636 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-29T14:12:35.673+05:30  INFO 59636 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-29T14:12:35.678+05:30  INFO 59636 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-29T14:12:35.680+05:30  INFO 59636 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-29T14:12:35.684+05:30  INFO 59636 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-29T14:12:37.610+05:30  INFO 59648 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 59648 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-29T14:12:37.611+05:30  INFO 59648 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-29T14:12:38.260+05:30  INFO 59648 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-29T14:12:38.268+05:30  INFO 59648 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-29T14:12:38.268+05:30  INFO 59648 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-29T14:12:38.291+05:30  INFO 59648 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-29T14:12:38.291+05:30  INFO 59648 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 631 ms
+2025-01-29T14:12:38.753+05:30  INFO 59648 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-29T14:12:38.759+05:30  INFO 59648 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.379 seconds (process running for 1.609)
+2025-01-29T14:12:42.677+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-29T14:12:42.677+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-29T14:12:42.678+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-29T14:12:42.752+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : Adding a new employee
+2025-01-29T14:12:42.756+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-01-29T14:12:42.758+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-29T14:12:42.972+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@56198e42
+2025-01-29T14:12:42.973+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-29T14:12:43.383+05:30 ERROR 59648 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Error occurred while adding a new employee to database
+2025-01-29T14:12:54.694+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : Adding a new employee
+2025-01-29T14:12:54.696+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-4] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-01-29T14:13:38.756+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-10] c.d.ems.controller.EmployeeController    : Adding a new employee
+2025-01-29T14:13:38.757+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-10] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-01-29T14:14:06.378+05:30  WARN 59648 --- [ems] [http-nio-8080-exec-4] .w.s.m.s.DefaultHandlerExceptionResolver : Resolved [org.springframework.http.converter.HttpMessageNotReadableException: JSON parse error: Unexpected character ('}' (code 125)): was expecting double-quote to start field name]
+2025-01-29T14:16:55.336+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : Adding a new employee
+2025-01-29T14:16:55.338+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-01-29T14:16:55.347+05:30 ERROR 59648 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Error occurred while adding a new employee to database
+2025-01-29T14:17:01.119+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : Adding a new employee
+2025-01-29T14:17:01.120+05:30  INFO 59648 --- [ems] [http-nio-8080-exec-4] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-01-29T14:19:59.146+05:30  INFO 59648 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-29T14:19:59.152+05:30  INFO 59648 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-29T14:19:59.155+05:30  INFO 59648 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-29T14:19:59.163+05:30  INFO 59648 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-01-29T14:20:01.416+05:30  INFO 59804 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 59804 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-01-29T14:20:01.418+05:30  INFO 59804 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-01-29T14:20:02.050+05:30  INFO 59804 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-01-29T14:20:02.056+05:30  INFO 59804 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-01-29T14:20:02.057+05:30  INFO 59804 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-01-29T14:20:02.087+05:30  INFO 59804 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-01-29T14:20:02.088+05:30  INFO 59804 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 618 ms
+2025-01-29T14:20:02.550+05:30  INFO 59804 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-01-29T14:20:02.555+05:30  INFO 59804 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.387 seconds (process running for 1.595)
+2025-01-29T14:20:24.300+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-01-29T14:20:24.301+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-01-29T14:20:24.302+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-01-29T14:20:24.388+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : Updating an existing employee with id: 38
+2025-01-29T14:20:24.389+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Editing employee with ID: 38 in the DB
+2025-01-29T14:20:24.392+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-01-29T14:20:24.678+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@667092d2
+2025-01-29T14:20:24.680+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-01-29T14:20:24.701+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Updating employee to the database
+2025-01-29T14:20:38.405+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : Updating an existing employee with id: 38
+2025-01-29T14:20:38.407+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-5] com.deval.ems.service.EmployeeService    : Editing employee with ID: 38 in the DB
+2025-01-29T14:20:38.412+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-5] com.deval.ems.service.EmployeeService    : Updating employee to the database
+2025-01-29T14:20:53.731+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-6] c.d.ems.controller.EmployeeController    : Updating an existing employee with id: 38
+2025-01-29T14:20:53.733+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-6] com.deval.ems.service.EmployeeService    : Editing employee with ID: 38 in the DB
+2025-01-29T14:20:53.737+05:30  INFO 59804 --- [ems] [http-nio-8080-exec-6] com.deval.ems.service.EmployeeService    : Updating employee to the database
+2025-01-29T14:24:21.448+05:30  INFO 59804 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-01-29T14:24:21.457+05:30  INFO 59804 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-01-29T14:24:21.460+05:30  INFO 59804 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-01-29T14:24:21.473+05:30  INFO 59804 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -2,8 +2,9 @@ package com.deval.ems.service;
 
 import com.deval.ems.dao.EmployeeDAO;
 import com.deval.ems.dto.EmployeeDTO;
-import com.deval.ems.dto.EmployeeDetailsDTO;
 import com.deval.ems.model.Employee;
+import com.deval.ems.request.NewEmployeeRequest;
+import com.deval.ems.request.UpdateEmployeeRequest;
 import org.modelmapper.ModelMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -11,8 +12,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
-import java.lang.reflect.InvocationTargetException;
-import java.time.LocalDate;
+
 import java.util.List;
 import java.util.NoSuchElementException;
 import java.util.Optional;
@@ -68,40 +68,12 @@ public class EmployeeService {
     /**
      * This method attempts to add a new employee and handles any data integrity issues,
      * such as duplicate phone numbers
-     * @param newEmployeeDTO UpdateEmployeeDTO object
+     * @param newEmployeeRequest NewEmployeeRequest object
      * @return A message indicating the result of the operation (success or failure).
      */
-    public String addEmployee(EmployeeDetailsDTO newEmployeeDTO) {
+    public String addEmployee(NewEmployeeRequest newEmployeeRequest) {
 
-        if(newEmployeeDTO.getName() == null) {
-            throw new DataIntegrityViolationException("The 'name' field is required");
-        }
-        if(newEmployeeDTO.getName().length()<2) {
-            throw new DataIntegrityViolationException("Name has to be at least 2 characters long");
-        }
-        if(newEmployeeDTO.getDepartmentId() == null) {
-            throw new DataIntegrityViolationException("The 'departmentId' field is required");
-        }
-        if(newEmployeeDTO.getPhone() == null) {
-            throw new DataIntegrityViolationException("The 'phone' field is required");
-        }
-        if(newEmployeeDTO.getPhone().length()!=10) {
-            throw new DataIntegrityViolationException("Phone should have 10 digits");
-        }
-        if(newEmployeeDTO.getJoiningDate() == null) {
-            throw new DataIntegrityViolationException("The 'joiningDate' field is required");
-        }
-        if (newEmployeeDTO.getJoiningDate().isAfter(LocalDate.now())) {
-            throw new DataIntegrityViolationException("The 'joiningDate' must be in the past or present");
-        }
-        if(newEmployeeDTO.getSalary() == null) {
-            throw new DataIntegrityViolationException("The 'salary' field is required");
-        }
-        if (newEmployeeDTO.getSalary()<0) {
-            throw new DataIntegrityViolationException("Salary should be positive");
-        }
-
-        Employee newEmployee = modelMapper.map(newEmployeeDTO, Employee.class);
+        Employee newEmployee = modelMapper.map(newEmployeeRequest, Employee.class);
 
         try {
             logger.info("Adding a new employee to the database");
@@ -116,23 +88,10 @@ public class EmployeeService {
      * Edits the employee details of given id.
      * Only edits the specified fields, and it's not necessary to provide all the fields.
      * @param id id of the employee to be updated
-     * @param employeeDetailsDTO UpdateEmployeeDTO object of employee fields to be updated
+     * @param updateEmployeeRequest UpdateEmployeeRequest object of employee fields to be updated
      * @return EmployeeDTO object of the updated employee
      */
-    public EmployeeDTO editEmployee(int id, EmployeeDetailsDTO employeeDetailsDTO){
-
-        if(employeeDetailsDTO.getName()!=null && employeeDetailsDTO.getName().length()<2) {
-            throw new DataIntegrityViolationException("Name has to be at least 2 characters long");
-        }
-        if(employeeDetailsDTO.getPhone()!=null && employeeDetailsDTO.getPhone().length()!=10) {
-            throw new DataIntegrityViolationException("Phone should have 10 digits");
-        }
-        if (employeeDetailsDTO.getJoiningDate()!=null && employeeDetailsDTO.getJoiningDate().isAfter(LocalDate.now())) {
-            throw new DataIntegrityViolationException("The 'joiningDate' must be in the past or present");
-        }
-        if (employeeDetailsDTO.getSalary()!=null && employeeDetailsDTO.getSalary()<0) {
-            throw new DataIntegrityViolationException("Salary should be positive");
-        }
+    public EmployeeDTO editEmployee(int id, UpdateEmployeeRequest updateEmployeeRequest){
 
         logger.info("Editing employee with ID: {} in the DB", id);
 
@@ -144,7 +103,7 @@ public class EmployeeService {
         logger.info("Updating employee to the database");
 
         // Update employee and get the result as an Optional
-        Optional<Employee> employeeOptional = employeeDAO.update(existingEmployee, employeeDetailsDTO);
+        Optional<Employee> employeeOptional = employeeDAO.update(existingEmployee, updateEmployeeRequest);
 
         // Check if the employee is present in the Optional
         if (employeeOptional.isEmpty()) {

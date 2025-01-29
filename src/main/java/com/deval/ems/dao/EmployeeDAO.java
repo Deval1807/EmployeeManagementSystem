@@ -1,7 +1,7 @@
 package com.deval.ems.dao;
 
-import com.deval.ems.dto.EmployeeDetailsDTO;
 import com.deval.ems.model.Employee;
+import com.deval.ems.request.UpdateEmployeeRequest;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
@@ -82,32 +82,32 @@ public class EmployeeDAO {
      * @param employee Employee object - updated employee details
      * @returns updated Employee object
      */
-    public Optional<Employee> update(Employee employee, EmployeeDetailsDTO employeeDetailsDTO) {
+    public Optional<Employee> update(Employee employee, UpdateEmployeeRequest updateEmployeeRequest) {
         // build the query dynamically
         StringBuilder dynamicSql = new StringBuilder("UPDATE employees SET ");
 
         // store the parameter values
         List<Object> params = new ArrayList<>();
 
-        if(employeeDetailsDTO.getName() != null) {
+        if(updateEmployeeRequest.getName() != null) {
             dynamicSql.append("name = ?, ");
-            params.add(employeeDetailsDTO.getName());
+            params.add(updateEmployeeRequest.getName());
         }
-        if (employeeDetailsDTO.getDepartmentId() != null) {
+        if (updateEmployeeRequest.getDepartmentId() != null) {
             dynamicSql.append("department_id = ?, ");
-            params.add(employeeDetailsDTO.getDepartmentId());
+            params.add(updateEmployeeRequest.getDepartmentId());
         }
-        if (employeeDetailsDTO.getPhone() != null) {
+        if (updateEmployeeRequest.getPhone() != null) {
             dynamicSql.append("phone = ?, ");
-            params.add(employeeDetailsDTO.getPhone());
+            params.add(updateEmployeeRequest.getPhone());
         }
-        if (employeeDetailsDTO.getJoiningDate() != null) {
+        if (updateEmployeeRequest.getJoiningDate() != null) {
             dynamicSql.append("joining_date = ?, ");
-            params.add(employeeDetailsDTO.getJoiningDate());
+            params.add(updateEmployeeRequest.getJoiningDate());
         }
-        if (employeeDetailsDTO.getSalary() != null) {
+        if (updateEmployeeRequest.getSalary() != null) {
             dynamicSql.append("salary = ?, ");
-            params.add(employeeDetailsDTO.getSalary());
+            params.add(updateEmployeeRequest.getSalary());
         }
 
         // it will have extra comma and space

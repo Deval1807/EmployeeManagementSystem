@@ -1,7 +1,8 @@
 package com.deval.ems.controller;
 
 import com.deval.ems.dto.EmployeeDTO;
-import com.deval.ems.dto.EmployeeDetailsDTO;
+import com.deval.ems.request.NewEmployeeRequest;
+import com.deval.ems.request.UpdateEmployeeRequest;
 import com.deval.ems.service.EmployeeService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -141,7 +142,7 @@ public class EmployeeController {
             )
     })
     @PostMapping()
-    public String addEmployee(@Valid @RequestBody EmployeeDetailsDTO newEmployee) {
+    public String addEmployee(@Valid @RequestBody NewEmployeeRequest newEmployee) {
         logger.info("Adding a new employee");
         return employeeService.addEmployee(newEmployee);
     }
@@ -149,7 +150,7 @@ public class EmployeeController {
     /**
      * Updates an employee by id
      * @param id The id of the employee to be updated
-     * @param employeeDetailsDTO UpdateEmployeeDTO object of employee fields to be updated
+     * @param updateEmployee Employee object of employee fields to be updated
      * @return EmployeeDTO object representing updated employee
      */
     @Operation(
@@ -196,9 +197,9 @@ public class EmployeeController {
             )
     })
     @PatchMapping("/{id}")
-    public EmployeeDTO updateEmployee(@PathVariable int id, @RequestBody EmployeeDetailsDTO employeeDetailsDTO) {
+    public EmployeeDTO updateEmployee(@PathVariable int id, @Valid @RequestBody UpdateEmployeeRequest updateEmployee) {
         logger.info("Updating an existing employee with id: {}",id);
-        return employeeService.editEmployee(id, employeeDetailsDTO);
+        return employeeService.editEmployee(id, updateEmployee);
     }
 
     /**
