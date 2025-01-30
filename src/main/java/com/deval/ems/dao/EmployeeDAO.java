@@ -82,32 +82,48 @@ public class EmployeeDAO {
      * @param employee Employee object - updated employee details
      * @returns updated Employee object
      */
-    public Optional<Employee> update(Employee employee, UpdateEmployeeRequest updateEmployeeRequest) {
+    public Employee update(Employee employee, UpdateEmployeeRequest updateEmployeeRequest) {
         // build the query dynamically
         StringBuilder dynamicSql = new StringBuilder("UPDATE employees SET ");
 
         // store the parameter values
         List<Object> params = new ArrayList<>();
 
+        boolean isUpdateRequired = false;
+
         if(updateEmployeeRequest.getName() != null) {
             dynamicSql.append("name = ?, ");
             params.add(updateEmployeeRequest.getName());
+            employee.setName(updateEmployeeRequest.getName());
+            isUpdateRequired = true;
         }
         if (updateEmployeeRequest.getDepartmentId() != null) {
             dynamicSql.append("department_id = ?, ");
             params.add(updateEmployeeRequest.getDepartmentId());
+            employee.setDepartment_id(updateEmployeeRequest.getDepartmentId());
+            isUpdateRequired = true;
         }
         if (updateEmployeeRequest.getPhone() != null) {
             dynamicSql.append("phone = ?, ");
             params.add(updateEmployeeRequest.getPhone());
+            employee.setPhone(updateEmployeeRequest.getPhone());
+            isUpdateRequired = true;
         }
         if (updateEmployeeRequest.getJoiningDate() != null) {
             dynamicSql.append("joining_date = ?, ");
             params.add(updateEmployeeRequest.getJoiningDate());
+            employee.setJoining_date(updateEmployeeRequest.getJoiningDate());
+            isUpdateRequired = true;
         }
         if (updateEmployeeRequest.getSalary() != null) {
             dynamicSql.append("salary = ?, ");
             params.add(updateEmployeeRequest.getSalary());
+            employee.setSalary(updateEmployeeRequest.getSalary());
+            isUpdateRequired = true;
+        }
+
+        if(!isUpdateRequired) {
+            throw new IllegalArgumentException("At least 1 field should be present to update");
         }
 
         // it will have extra comma and space
@@ -121,8 +137,7 @@ public class EmployeeDAO {
 
         jdbcTemplate.update(dynamicSql.toString(), params.toArray());
 
-        return findById(employee.getEmp_id());
-
+        return employee;
     }
 
     /**

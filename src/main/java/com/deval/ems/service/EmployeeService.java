@@ -103,19 +103,9 @@ public class EmployeeService {
         logger.info("Updating employee to the database");
 
         // Update employee and get the result as an Optional
-        Optional<Employee> employeeOptional = employeeDAO.update(existingEmployee, updateEmployeeRequest);
+        Employee updatedEmployee = employeeDAO.update(existingEmployee, updateEmployeeRequest);
 
-        // Check if the employee is present in the Optional
-        if (employeeOptional.isEmpty()) {
-            // If empty, throw an exception
-            logger.error("Error occurred while updating the employee to database: Employee not found or update failed");
-            throw new DataIntegrityViolationException("Employee update failed or employee not found.");
-        } else {
-            // If the employee is present, map it to EmployeeDTO and return
-            Employee updatedEmployee = employeeOptional.get();
-            return modelMapper.map(updatedEmployee, EmployeeDTO.class);
-        }
-
+        return modelMapper.map(updatedEmployee,EmployeeDTO.class);
     }
 
     /**

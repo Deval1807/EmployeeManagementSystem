@@ -60,8 +60,10 @@ public class EmployeeController {
     })
     @GetMapping()
     public List<EmployeeDTO> getEmployees() {
-        logger.info("Fetching all the employees");
-        return employeeService.getEmployees();
+        logger.info("IN: Request to fetch all employees");
+        List<EmployeeDTO> employees = employeeService.getEmployees();
+        logger.info("OUT: Successfully fetched all the employees");
+        return employees;
     }
 
     /**
@@ -102,8 +104,10 @@ public class EmployeeController {
     })
     @GetMapping("/{id}")
     public EmployeeDTO getEmployee(@PathVariable int id) {
-        logger.info("Fetching employee with id: {}",id);
-        return employeeService.getEmployeeById(id);
+        logger.info("IN: Request to fetch an employee with ID: {}",id);
+        EmployeeDTO employee = employeeService.getEmployeeById(id);
+        logger.info("OUT: Successfully fetched an employee with ID: {}",id);
+        return employee;
     }
 
     /**
@@ -143,8 +147,10 @@ public class EmployeeController {
     })
     @PostMapping()
     public String addEmployee(@Valid @RequestBody NewEmployeeRequest newEmployee) {
-        logger.info("Adding a new employee");
-        return employeeService.addEmployee(newEmployee);
+        logger.info("IN: Request to add a new employee with body body: {}",newEmployee);
+        String res = employeeService.addEmployee(newEmployee);
+        logger.info("OUT: Successfully added a new employee with body: {}",newEmployee);
+        return res;
     }
 
     /**
@@ -198,8 +204,10 @@ public class EmployeeController {
     })
     @PatchMapping("/{id}")
     public EmployeeDTO updateEmployee(@PathVariable int id, @Valid @RequestBody UpdateEmployeeRequest updateEmployee) {
-        logger.info("Updating an existing employee with id: {}",id);
-        return employeeService.editEmployee(id, updateEmployee);
+        logger.info("IN: Request to update the employee with id: {}",id);
+        EmployeeDTO updatedEmployee = employeeService.editEmployee(id, updateEmployee);
+        logger.info("OUT: Successfully updated the employee with id: {}",id);
+        return updatedEmployee;
     }
 
     /**
@@ -237,8 +245,9 @@ public class EmployeeController {
     })
     @DeleteMapping("/{id}")
     public String deleteEmployee(@PathVariable int id) {
+        logger.info("IN: Request to delete an employee with id: {}",id);
         employeeService.deleteEmployee(id);
-        logger.info("Deleting employee with id: {}",id);
+        logger.info("OUT: Successfully deleted employee with id: {}",id);
         return "Employee deleted with ID: "+id;
     }
 
