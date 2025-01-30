@@ -10,9 +10,9 @@ import java.time.LocalDate;
 @AllArgsConstructor // by default @Data won't generate constructor with args
 @NoArgsConstructor // Needed for modelmapper
 public class Employee {
-    private int emp_id;
+    private Integer emp_id;
     private String name;
-    private int department_id;
+    private Integer department_id;
     private String phone;
     private LocalDate joining_date;
     private Double salary;

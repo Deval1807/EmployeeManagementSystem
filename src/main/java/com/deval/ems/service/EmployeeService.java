@@ -100,10 +100,21 @@ public class EmployeeService {
             return new NoSuchElementException("Employee with ID " + id + " not found.");
         });
 
+        if(updateEmployeeRequest.getName()==null
+                && updateEmployeeRequest.getPhone()==null
+                && updateEmployeeRequest.getDepartmentId()==null
+                && updateEmployeeRequest.getJoiningDate()==null
+                && updateEmployeeRequest.getSalary()==null)
+        {
+            throw new IllegalArgumentException("At least 1 field should be present to update");
+        }
+
         logger.info("Updating employee to the database");
 
-        // Update employee and get the result as an Optional
-        Employee updatedEmployee = employeeDAO.update(existingEmployee, updateEmployeeRequest);
+        Employee updateEmployee = modelMapper.map(updateEmployeeRequest, Employee.class);
+
+        // Update employee and get the result
+        Employee updatedEmployee = employeeDAO.update(existingEmployee, updateEmployee);
 
         return modelMapper.map(updatedEmployee,EmployeeDTO.class);
     }

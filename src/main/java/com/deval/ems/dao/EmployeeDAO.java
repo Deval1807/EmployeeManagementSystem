@@ -36,13 +36,39 @@ public class EmployeeDAO {
         }
     }
 
+    private Employee mapEmployeeRow(ResultSet rs, int rowNum) throws SQLException {
+        return new Employee(
+                rs.getInt("emp_id"),
+                rs.getString("name"),
+                rs.getInt("department_id"),
+                rs.getString("phone"),
+                rs.getDate("joining_date").toLocalDate(),
+                rs.getDouble("salary")
+        );
+    }
+
     /**
      * This method queries the DB and find all the employees
      * @return List of Employee objects
      */
     public List<Employee> findAll() {
         String sql = "SELECT * FROM employees";
-        return jdbcTemplate.query(sql, new EmployeeRowMapper());
+
+//        return jdbcTemplate.query(sql, new EmployeeRowMapper());
+
+//        return jdbcTemplate.query(sql, (rs, rowNum) ->
+//                new Employee(
+//                        rs.getInt("emp_id"),
+//                        rs.getString("name"),
+//                        rs.getInt("department_id"),
+//                        rs.getString("phone"),
+//                        rs.getDate("joining_date").toLocalDate(),
+//                        rs.getDouble("salary")
+//                )
+//        );
+
+        // this::mapEmployeeRow --> method reference to pass it as a callback function
+        return jdbcTemplate.query(sql, this::mapEmployeeRow);
     }
 
     /**
@@ -82,48 +108,37 @@ public class EmployeeDAO {
      * @param employee Employee object - updated employee details
      * @returns updated Employee object
      */
-    public Employee update(Employee employee, UpdateEmployeeRequest updateEmployeeRequest) {
+    public Employee update(Employee employee, Employee updateEmployee) {
         // build the query dynamically
         StringBuilder dynamicSql = new StringBuilder("UPDATE employees SET ");
 
         // store the parameter values
         List<Object> params = new ArrayList<>();
 
-        boolean isUpdateRequired = false;
-
-        if(updateEmployeeRequest.getName() != null) {
+        if(updateEmployee.getName() != null) {
             dynamicSql.append("name = ?, ");
-            params.add(updateEmployeeRequest.getName());
-            employee.setName(updateEmployeeRequest.getName());
-            isUpdateRequired = true;
+            params.add(updateEmployee.getName());
+            employee.setName(updateEmployee.getName());
         }
-        if (updateEmployeeRequest.getDepartmentId() != null) {
+        if (updateEmployee.getDepartment_id() != null) {
             dynamicSql.append("department_id = ?, ");
-            params.add(updateEmployeeRequest.getDepartmentId());
-            employee.setDepartment_id(updateEmployeeRequest.getDepartmentId());
-            isUpdateRequired = true;
+            params.add(updateEmployee.getDepartment_id());
+            employee.setDepartment_id(updateEmployee.getDepartment_id());
         }
-        if (updateEmployeeRequest.getPhone() != null) {
+        if (updateEmployee.getPhone() != null) {
             dynamicSql.append("phone = ?, ");
-            params.add(updateEmployeeRequest.getPhone());
-            employee.setPhone(updateEmployeeRequest.getPhone());
-            isUpdateRequired = true;
+            params.add(updateEmployee.getPhone());
+            employee.setPhone(updateEmployee.getPhone());
         }
-        if (updateEmployeeRequest.getJoiningDate() != null) {
+        if (updateEmployee.getJoining_date() != null) {
             dynamicSql.append("joining_date = ?, ");
-            params.add(updateEmployeeRequest.getJoiningDate());
-            employee.setJoining_date(updateEmployeeRequest.getJoiningDate());
-            isUpdateRequired = true;
+            params.add(updateEmployee.getJoining_date());
+            employee.setJoining_date(updateEmployee.getJoining_date());
         }
-        if (updateEmployeeRequest.getSalary() != null) {
+        if (updateEmployee.getSalary() != null) {
             dynamicSql.append("salary = ?, ");
-            params.add(updateEmployeeRequest.getSalary());
-            employee.setSalary(updateEmployeeRequest.getSalary());
-            isUpdateRequired = true;
-        }
-
-        if(!isUpdateRequired) {
-            throw new IllegalArgumentException("At least 1 field should be present to update");
+            params.add(updateEmployee.getSalary());
+            employee.setSalary(updateEmployee.getSalary());
         }
 
         // it will have extra comma and space
