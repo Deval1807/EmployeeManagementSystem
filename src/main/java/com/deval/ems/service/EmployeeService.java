@@ -109,14 +109,17 @@ public class EmployeeService {
             throw new IllegalArgumentException("At least 1 field should be present to update");
         }
 
+        // update the existingEmployee object to updated employee
+        modelMapper.map(updateEmployeeRequest, existingEmployee);
+
         logger.info("Updating employee to the database");
 
         Employee updateEmployee = modelMapper.map(updateEmployeeRequest, Employee.class);
 
         // Update employee and get the result
-        Employee updatedEmployee = employeeDAO.update(existingEmployee, updateEmployee);
+        employeeDAO.update(id, updateEmployee);
 
-        return modelMapper.map(updatedEmployee,EmployeeDTO.class);
+        return modelMapper.map(existingEmployee,EmployeeDTO.class);
     }
 
     /**

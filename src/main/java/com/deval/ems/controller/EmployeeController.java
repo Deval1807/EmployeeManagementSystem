@@ -33,7 +33,7 @@ public class EmployeeController {
     @Autowired
     private EmployeeService employeeService;
 
-    /**
+    /*
      * Retrieves the details of all employees
      * @return List of EmployeeDTO object representing all employees
      */

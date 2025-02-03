@@ -105,10 +105,10 @@ public class EmployeeDAO {
     /**
      * This method queries DB to update an employee by id
      *
-     * @param employee Employee object - updated employee details
+     * @param updateEmployee Employee object - updated employee details
      * @returns updated Employee object
      */
-    public Employee update(Employee employee, Employee updateEmployee) {
+    public void update(int id, Employee updateEmployee) {
         // build the query dynamically
         StringBuilder dynamicSql = new StringBuilder("UPDATE employees SET ");
 
@@ -118,27 +118,22 @@ public class EmployeeDAO {
         if(updateEmployee.getName() != null) {
             dynamicSql.append("name = ?, ");
             params.add(updateEmployee.getName());
-            employee.setName(updateEmployee.getName());
         }
         if (updateEmployee.getDepartment_id() != null) {
             dynamicSql.append("department_id = ?, ");
             params.add(updateEmployee.getDepartment_id());
-            employee.setDepartment_id(updateEmployee.getDepartment_id());
         }
         if (updateEmployee.getPhone() != null) {
             dynamicSql.append("phone = ?, ");
             params.add(updateEmployee.getPhone());
-            employee.setPhone(updateEmployee.getPhone());
         }
         if (updateEmployee.getJoining_date() != null) {
             dynamicSql.append("joining_date = ?, ");
             params.add(updateEmployee.getJoining_date());
-            employee.setJoining_date(updateEmployee.getJoining_date());
         }
         if (updateEmployee.getSalary() != null) {
             dynamicSql.append("salary = ?, ");
             params.add(updateEmployee.getSalary());
-            employee.setSalary(updateEmployee.getSalary());
         }
 
         // it will have extra comma and space
@@ -148,11 +143,9 @@ public class EmployeeDAO {
         dynamicSql.append(" WHERE emp_id = ?");
 
         // add the employee id to params list
-        params.add(employee.getEmp_id());
+        params.add(id);
 
         jdbcTemplate.update(dynamicSql.toString(), params.toArray());
-
-        return employee;
     }
 
     /**
