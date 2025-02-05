@@ -7,4 +7,6 @@
     <!-- Define EmployeeService as a Spring Bean -->
     <bean id="employeeService" class="com.deval.ems.service.EmployeeService"/>
 
+    <bean id="clientService" class="com.deval.ems.service.ClientService"/>
+
 </beans>
