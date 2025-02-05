@@ -1,33 +1,16 @@
-2025-02-04T18:20:23.070+05:30  INFO 14945 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 14945 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:20:23.078+05:30  INFO 14945 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:20:23.757+05:30  INFO 14945 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:20:23.765+05:30  INFO 14945 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:20:23.766+05:30  INFO 14945 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:20:23.799+05:30  INFO 14945 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:20:23.800+05:30  INFO 14945 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 668 ms
-2025-02-04T18:20:24.286+05:30  INFO 14945 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-04T18:20:24.295+05:30  INFO 14945 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.495 seconds (process running for 1.767)
-2025-02-04T18:20:38.283+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-04T18:20:38.283+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-04T18:20:38.285+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-02-04T18:20:38.307+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
-2025-02-04T18:20:38.307+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
-2025-02-04T18:20:38.311+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-04T18:20:38.611+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@463f2529
-2025-02-04T18:20:38.612+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-04T18:20:38.645+05:30  INFO 14945 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
-2025-02-04T18:23:03.610+05:30  INFO 14945 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-04T18:23:03.619+05:30  INFO 14945 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-04T18:23:03.622+05:30  INFO 14945 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-04T18:23:03.631+05:30  INFO 14945 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-04T18:23:05.544+05:30  INFO 15037 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15037 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:23:05.548+05:30  INFO 15037 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:23:05.919+05:30  WARN 15037 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.parsing.BeanDefinitionParsingException: Configuration problem: Failed to register bean definition with name 'employeeService'
-Offending resource: class path resource [beans.xml]
-2025-02-04T18:23:05.955+05:30  INFO 15037 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-02-05T10:34:29.260+05:30  INFO 16900 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 16900 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-05T10:34:29.267+05:30  INFO 16900 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-05T10:34:30.010+05:30  INFO 16900 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-05T10:34:30.017+05:30  INFO 16900 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-05T10:34:30.017+05:30  INFO 16900 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-05T10:34:30.052+05:30  INFO 16900 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-05T10:34:30.052+05:30  INFO 16900 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 731 ms
+2025-02-05T10:34:30.092+05:30  WARN 16900 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController': Unsatisfied dependency expressed through field 'employeeService': Error creating bean with name 'employeeService': Unsatisfied dependency expressed through field 'employeeDAO': Error creating bean with name 'employeeDAO': Unsatisfied dependency expressed through field 'jdbcTemplate': Error creating bean with name 'dataSourceScriptDatabaseInitializer' defined in class path resource [org/springframework/boot/autoconfigure/sql/init/DataSourceInitializationConfiguration.class]: Unsatisfied dependency expressed through method 'dataSourceScriptDatabaseInitializer' parameter 0: Error creating bean with name 'dataSource' defined in class path resource [org/springframework/boot/autoconfigure/jdbc/DataSourceConfiguration$Hikari.class]: Failed to instantiate [com.zaxxer.hikari.HikariDataSource]: Factory method 'dataSource' threw exception with message: Failed to determine a suitable driver class
+2025-02-05T10:34:30.094+05:30  INFO 16900 --- [ems] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-05T10:34:30.104+05:30  INFO 16900 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:23:05.976+05:30 ERROR 15037 --- [ems] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2025-02-05T10:34:30.112+05:30 ERROR 16900 --- [ems] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -35,94 +18,31 @@ APPLICATION FAILED TO START
 
 Description:
 
-The bean 'employeeService', defined in class path resource [beans.xml], could not be registered. A bean with that name has already been defined in file [/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes/com/deval/ems/service/EmployeeService.class] and overriding is disabled.
+Failed to configure a DataSource: 'url' attribute is not specified and no embedded datasource could be configured.
+
+Reason: Failed to determine a suitable driver class
+
 
 Action:
 
-Consider renaming one of the beans or enabling overriding by setting spring.main.allow-bean-definition-overriding=true
+Consider the following:
+	If you want an embedded database (H2, HSQL or Derby), please put it on the classpath.
+	If you have database settings to be loaded from a particular profile you may need to activate it (no profiles are currently active).
 
-2025-02-04T18:23:53.082+05:30  INFO 15057 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15057 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:23:53.083+05:30  INFO 15057 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:23:53.684+05:30  WARN 15057 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'empService' defined in class path resource [beans.xml]
-2025-02-04T18:23:53.690+05:30  INFO 15057 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:23:53.699+05:30 ERROR 15057 --- [ems] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'empService' defined in class path resource [beans.xml]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1552) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:686) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getType(AbstractBeanFactory.java:735) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAnnotationOnBean(DefaultListableBeanFactory.java:765) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector.detect(AnnotationDependsOnDatabaseInitializationDetector.java:36) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.detectDependsOnInitializationBeanNames(DatabaseInitializationDependencyConfigurer.java:152) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.postProcessBeanFactory(DatabaseInitializationDependencyConfigurer.java:115) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
-	at com.deval.ems.EmsApplication.main(EmsApplication.java:21) ~[classes/:na]
-Caused by: java.lang.ClassNotFoundException: com.example.service.EmployeeService
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528) ~[na:na]
-	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:578) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:557) ~[na:na]
-	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321) ~[spring-core-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:503) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1620) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1545) ~[spring-beans-6.2.0.jar:6.2.0]
-	... 18 common frames omitted
-
-2025-02-04T18:24:59.848+05:30  INFO 15083 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15083 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:24:59.849+05:30  INFO 15083 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:25:00.520+05:30  INFO 15083 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:25:00.529+05:30  INFO 15083 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:25:00.530+05:30  INFO 15083 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:25:00.554+05:30  INFO 15083 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:25:00.554+05:30  INFO 15083 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 656 ms
-2025-02-04T18:25:01.044+05:30  INFO 15083 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-04T18:25:01.050+05:30  INFO 15083 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.445 seconds (process running for 1.669)
-2025-02-04T18:25:06.543+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-04T18:25:06.545+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-04T18:25:06.546+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-02-04T18:25:06.565+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
-2025-02-04T18:25:06.566+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
-2025-02-04T18:25:06.569+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-04T18:25:06.793+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6166f688
-2025-02-04T18:25:06.795+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-04T18:25:06.818+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
-2025-02-04T18:31:35.493+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : IN: Request to add a new employee with body body: NewEmployeeRequest(name=abcd, departmentId=1, phone=1212109000, joiningDate=2024-01-10, salary=15000.0)
-2025-02-04T18:31:35.495+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-5] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
-2025-02-04T18:31:35.537+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : OUT: Successfully added a new employee with body: NewEmployeeRequest(name=abcd, departmentId=1, phone=1212109000, joiningDate=2024-01-10, salary=15000.0)
-2025-02-04T18:31:45.478+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-6] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
-2025-02-04T18:31:45.478+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-6] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
-2025-02-04T18:31:45.491+05:30  INFO 15083 --- [ems] [http-nio-8080-exec-6] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
-2025-02-04T18:37:08.040+05:30  INFO 15083 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-04T18:37:08.047+05:30  INFO 15083 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-04T18:37:08.051+05:30  INFO 15083 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-04T18:37:08.060+05:30  INFO 15083 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-04T18:37:25.051+05:30  INFO 15316 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15316 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:37:25.052+05:30  INFO 15316 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:37:25.706+05:30  INFO 15316 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:37:25.714+05:30  INFO 15316 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:37:25.715+05:30  INFO 15316 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:37:25.748+05:30  INFO 15316 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:37:25.748+05:30  INFO 15316 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 648 ms
-2025-02-04T18:37:25.781+05:30  WARN 15316 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController': Unsatisfied dependency expressed through field 'employeeService': No qualifying bean of type 'com.deval.ems.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2025-02-04T18:37:25.783+05:30  INFO 15316 --- [ems] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-02-04T18:37:25.792+05:30  INFO 15316 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+2025-02-05T10:54:25.342+05:30  INFO 17340 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 17340 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-05T10:54:25.344+05:30  INFO 17340 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-05T10:54:26.004+05:30  INFO 17340 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-05T10:54:26.012+05:30  INFO 17340 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-05T10:54:26.012+05:30  INFO 17340 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-05T10:54:26.039+05:30  INFO 17340 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-05T10:54:26.039+05:30  INFO 17340 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 647 ms
+2025-02-05T10:54:26.294+05:30 ERROR 17340 --- [ems] [main] com.zaxxer.hikari.HikariConfig           : Failed to load driver class org.postgresql.Driver from HikariConfig class classloader jdk.internal.loader.ClassLoaders$AppClassLoader@5a07e868
+2025-02-05T10:54:26.295+05:30  WARN 17340 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.boot.context.properties.ConfigurationPropertiesBindException: Error creating bean with name 'db2DataSource': Could not bind properties to 'DataSource' : prefix=spring.datasource.db2, ignoreInvalidFields=false, ignoreUnknownFields=true
+2025-02-05T10:54:26.297+05:30  INFO 17340 --- [ems] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2025-02-05T10:54:26.305+05:30  INFO 17340 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:37:25.801+05:30 ERROR 15316 --- [ems] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
+2025-02-05T10:54:26.314+05:30 ERROR 17340 --- [ems] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
 
 ***************************
 APPLICATION FAILED TO START
@@ -130,276 +50,112 @@ APPLICATION FAILED TO START
 
 Description:
 
-Field employeeService in com.deval.ems.controller.EmployeeController required a bean of type 'com.deval.ems.service.EmployeeService' that could not be found.
+Failed to bind properties under 'spring.datasource.db2' to javax.sql.DataSource:
 
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'com.deval.ems.service.EmployeeService' in your configuration.
-
-2025-02-04T18:41:35.164+05:30  INFO 15374 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15374 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:41:35.166+05:30  INFO 15374 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:41:35.824+05:30  INFO 15374 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:41:35.833+05:30  INFO 15374 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:41:35.833+05:30  INFO 15374 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:41:35.859+05:30  INFO 15374 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:41:35.859+05:30  INFO 15374 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 647 ms
-2025-02-04T18:41:35.900+05:30  WARN 15374 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController': Unsatisfied dependency expressed through field 'employeeService': No qualifying bean of type 'com.deval.ems.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2025-02-04T18:41:35.902+05:30  INFO 15374 --- [ems] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-02-04T18:41:35.912+05:30  INFO 15374 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:41:35.923+05:30 ERROR 15374 --- [ems] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field employeeService in com.deval.ems.controller.EmployeeController required a bean of type 'com.deval.ems.service.EmployeeService' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
+    Property: spring.datasource.db2.driver-class-name
+    Value: "org.postgresql.Driver"
+    Origin: class path resource [application.properties] - 17:41
+    Reason: java.lang.RuntimeException: Failed to load driver class org.postgresql.Driver in either of HikariConfig class loader or Thread context classloader
 
 Action:
 
-Consider defining a bean of type 'com.deval.ems.service.EmployeeService' in your configuration.
+Update your application's configuration
 
-2025-02-04T18:43:04.314+05:30  INFO 15431 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15431 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:43:04.315+05:30  INFO 15431 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:43:04.868+05:30  WARN 15431 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'employeeService' defined in class path resource [applicationContext.xml]
-2025-02-04T18:43:04.875+05:30  INFO 15431 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:43:04.884+05:30 ERROR 15431 --- [ems] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'employeeService' defined in class path resource [applicationContext.xml]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1552) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:686) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getType(AbstractBeanFactory.java:735) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAnnotationOnBean(DefaultListableBeanFactory.java:765) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector.detect(AnnotationDependsOnDatabaseInitializationDetector.java:36) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.detectDependsOnInitializationBeanNames(DatabaseInitializationDependencyConfigurer.java:152) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.postProcessBeanFactory(DatabaseInitializationDependencyConfigurer.java:115) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
-	at com.deval.ems.EmsApplication.main(EmsApplication.java:21) ~[classes/:na]
-Caused by: java.lang.ClassNotFoundException: com.example.service.EmployeeService
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528) ~[na:na]
-	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:578) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:557) ~[na:na]
-	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321) ~[spring-core-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:503) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1620) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1545) ~[spring-beans-6.2.0.jar:6.2.0]
-	... 18 common frames omitted
-
-2025-02-04T18:43:44.334+05:30  INFO 15441 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15441 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:43:44.335+05:30  INFO 15441 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:43:44.922+05:30  WARN 15441 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'employeeService' defined in class path resource [applicationContext.xml]
-2025-02-04T18:43:44.929+05:30  INFO 15441 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:43:44.939+05:30 ERROR 15441 --- [ems] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'employeeService' defined in class path resource [applicationContext.xml]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1552) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:686) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getType(AbstractBeanFactory.java:735) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAnnotationOnBean(DefaultListableBeanFactory.java:765) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector.detect(AnnotationDependsOnDatabaseInitializationDetector.java:36) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.detectDependsOnInitializationBeanNames(DatabaseInitializationDependencyConfigurer.java:152) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.postProcessBeanFactory(DatabaseInitializationDependencyConfigurer.java:115) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
-	at com.deval.ems.EmsApplication.main(EmsApplication.java:21) ~[classes/:na]
-Caused by: java.lang.ClassNotFoundException: com.example.service.EmployeeService
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528) ~[na:na]
-	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:578) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:557) ~[na:na]
-	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321) ~[spring-core-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:503) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1620) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1545) ~[spring-beans-6.2.0.jar:6.2.0]
-	... 18 common frames omitted
-
-2025-02-04T18:43:57.101+05:30  INFO 15448 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15448 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:43:57.104+05:30  INFO 15448 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:43:57.647+05:30  WARN 15448 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'employeeService' defined in class path resource [applicationContext.xml]
-2025-02-04T18:43:57.654+05:30  INFO 15448 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:43:57.663+05:30 ERROR 15448 --- [ems] [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [com.example.service.EmployeeService] for bean with name 'employeeService' defined in class path resource [applicationContext.xml]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1552) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.determineTargetType(AbstractAutowireCapableBeanFactory.java:686) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:654) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getType(AbstractBeanFactory.java:735) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.findAnnotationOnBean(DefaultListableBeanFactory.java:765) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.boot.sql.init.dependency.AnnotationDependsOnDatabaseInitializationDetector.detect(AnnotationDependsOnDatabaseInitializationDetector.java:36) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.detectDependsOnInitializationBeanNames(DatabaseInitializationDependencyConfigurer.java:152) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.sql.init.dependency.DatabaseInitializationDependencyConfigurer$DependsOnDatabaseInitializationPostProcessor.postProcessBeanFactory(DatabaseInitializationDependencyConfigurer.java:115) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:363) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.PostProcessorRegistrationDelegate.invokeBeanFactoryPostProcessors(PostProcessorRegistrationDelegate.java:197) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.invokeBeanFactoryPostProcessors(AbstractApplicationContext.java:791) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:609) ~[spring-context-6.2.0.jar:6.2.0]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.4.0.jar:3.4.0]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.4.0.jar:3.4.0]
-	at com.deval.ems.EmsApplication.main(EmsApplication.java:21) ~[classes/:na]
-Caused by: java.lang.ClassNotFoundException: com.example.service.EmployeeService
-	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
-	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
-	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:528) ~[na:na]
-	at java.base/java.lang.Class.forName0(Native Method) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:578) ~[na:na]
-	at java.base/java.lang.Class.forName(Class.java:557) ~[na:na]
-	at org.springframework.util.ClassUtils.forName(ClassUtils.java:321) ~[spring-core-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:503) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1620) ~[spring-beans-6.2.0.jar:6.2.0]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1545) ~[spring-beans-6.2.0.jar:6.2.0]
-	... 18 common frames omitted
-
-2025-02-04T18:45:34.950+05:30  INFO 15467 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15467 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:45:34.952+05:30  INFO 15467 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:45:35.650+05:30  INFO 15467 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:45:35.658+05:30  INFO 15467 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:45:35.658+05:30  INFO 15467 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:45:35.683+05:30  INFO 15467 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:45:35.683+05:30  INFO 15467 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 678 ms
-2025-02-04T18:45:36.175+05:30  INFO 15467 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-04T18:45:36.181+05:30  INFO 15467 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.541 seconds (process running for 1.875)
-2025-02-04T18:45:43.956+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-04T18:45:43.957+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-04T18:45:43.958+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-02-04T18:45:43.977+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
-2025-02-04T18:45:43.977+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
-2025-02-04T18:45:43.981+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-04T18:45:44.219+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5992ad66
-2025-02-04T18:45:44.220+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-04T18:45:44.243+05:30  INFO 15467 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
-2025-02-04T18:45:50.219+05:30  INFO 15467 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-04T18:45:50.224+05:30  INFO 15467 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-04T18:45:50.226+05:30  INFO 15467 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-04T18:45:50.230+05:30  INFO 15467 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-04T18:45:51.942+05:30  INFO 15479 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15479 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:45:51.943+05:30  INFO 15479 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:45:52.582+05:30  INFO 15479 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:45:52.589+05:30  INFO 15479 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:45:52.590+05:30  INFO 15479 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:45:52.621+05:30  INFO 15479 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:45:52.621+05:30  INFO 15479 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 629 ms
-2025-02-04T18:45:52.655+05:30  WARN 15479 --- [ems] [main] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'employeeController': Unsatisfied dependency expressed through field 'employeeService': No qualifying bean of type 'com.deval.ems.service.EmployeeService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
-2025-02-04T18:45:52.657+05:30  INFO 15479 --- [ems] [main] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2025-02-04T18:45:52.666+05:30  INFO 15479 --- [ems] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-02-04T18:45:52.676+05:30 ERROR 15479 --- [ems] [main] o.s.b.d.LoggingFailureAnalysisReporter   : 
-
-***************************
-APPLICATION FAILED TO START
-***************************
-
-Description:
-
-Field employeeService in com.deval.ems.controller.EmployeeController required a bean of type 'com.deval.ems.service.EmployeeService' that could not be found.
-
-The injection point has the following annotations:
-	- @org.springframework.beans.factory.annotation.Autowired(required=true)
-
-
-Action:
-
-Consider defining a bean of type 'com.deval.ems.service.EmployeeService' in your configuration.
-
-2025-02-04T18:46:01.303+05:30  INFO 15490 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15490 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:46:01.304+05:30  INFO 15490 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:46:01.988+05:30  INFO 15490 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:46:01.996+05:30  INFO 15490 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:46:01.996+05:30  INFO 15490 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:46:02.020+05:30  INFO 15490 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:46:02.021+05:30  INFO 15490 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 667 ms
-2025-02-04T18:46:02.507+05:30  INFO 15490 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-04T18:46:02.513+05:30  INFO 15490 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.441 seconds (process running for 1.661)
-2025-02-04T18:46:32.547+05:30  INFO 15490 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-04T18:46:32.554+05:30  INFO 15490 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-04T18:46:34.283+05:30  INFO 15502 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15502 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:46:34.284+05:30  INFO 15502 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:46:34.960+05:30  INFO 15502 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:46:34.967+05:30  INFO 15502 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:46:34.968+05:30  INFO 15502 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:46:34.993+05:30  INFO 15502 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:46:34.993+05:30  INFO 15502 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 660 ms
-2025-02-04T18:46:35.485+05:30  INFO 15502 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-04T18:46:35.491+05:30  INFO 15502 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.438 seconds (process running for 1.648)
-2025-02-04T18:46:37.773+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-04T18:46:37.773+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-04T18:46:37.774+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2025-02-04T18:46:37.790+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
-2025-02-04T18:46:37.790+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
-2025-02-04T18:46:37.793+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-04T18:46:38.039+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@27b708bb
-2025-02-04T18:46:38.040+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-04T18:46:38.061+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
-2025-02-04T18:46:43.498+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : IN: Request to add a new employee with body body: NewEmployeeRequest(name=abcd, departmentId=1, phone=1212109000, joiningDate=2024-01-10, salary=15000.0)
-2025-02-04T18:46:43.499+05:30  INFO 15502 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
-2025-02-04T18:46:43.962+05:30 ERROR 15502 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.EmployeeService    : Error occurred while adding a new employee to database
-2025-02-04T18:48:02.962+05:30  INFO 15502 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-04T18:48:02.969+05:30  INFO 15502 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-04T18:48:02.971+05:30  INFO 15502 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-04T18:48:02.975+05:30  INFO 15502 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2025-02-04T18:53:04.379+05:30  INFO 15610 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 15610 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
-2025-02-04T18:53:04.381+05:30  INFO 15610 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
-2025-02-04T18:53:05.080+05:30  INFO 15610 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
-2025-02-04T18:53:05.088+05:30  INFO 15610 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-02-04T18:53:05.089+05:30  INFO 15610 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
-2025-02-04T18:53:05.122+05:30  INFO 15610 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-02-04T18:53:05.122+05:30  INFO 15610 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 693 ms
-2025-02-04T18:53:05.625+05:30  INFO 15610 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
-2025-02-04T18:53:05.630+05:30  INFO 15610 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.59 seconds (process running for 1.826)
-2025-02-04T18:53:13.380+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-02-04T18:53:13.381+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-02-04T18:53:13.381+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2025-02-04T18:53:13.400+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
-2025-02-04T18:53:13.400+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
-2025-02-04T18:53:13.403+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2025-02-04T18:53:13.653+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@46e704ca
-2025-02-04T18:53:13.654+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2025-02-04T18:53:13.683+05:30  INFO 15610 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
-2025-02-04T18:53:17.736+05:30  INFO 15610 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
-2025-02-04T18:53:17.741+05:30  INFO 15610 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
-2025-02-04T18:53:17.743+05:30  INFO 15610 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2025-02-04T18:53:17.747+05:30  INFO 15610 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-05T10:59:13.976+05:30  INFO 17537 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 17537 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-05T10:59:13.977+05:30  INFO 17537 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-05T10:59:14.667+05:30  INFO 17537 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-05T10:59:14.676+05:30  INFO 17537 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-05T10:59:14.676+05:30  INFO 17537 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-05T10:59:14.703+05:30  INFO 17537 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-05T10:59:14.703+05:30  INFO 17537 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 675 ms
+2025-02-05T10:59:15.193+05:30  INFO 17537 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-05T10:59:15.199+05:30  INFO 17537 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.465 seconds (process running for 1.674)
+2025-02-05T10:59:30.017+05:30  INFO 17537 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-05T10:59:30.017+05:30  INFO 17537 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-05T10:59:30.018+05:30  INFO 17537 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-05T10:59:30.037+05:30  INFO 17537 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
+2025-02-05T10:59:30.037+05:30  INFO 17537 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-02-05T10:59:30.041+05:30 ERROR 17537 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-02-05T11:00:27.926+05:30  INFO 17537 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-05T11:00:27.937+05:30  INFO 17537 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-05T11:00:29.942+05:30  INFO 17577 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 17577 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-05T11:00:29.943+05:30  INFO 17577 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-05T11:00:30.633+05:30  INFO 17577 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-05T11:00:30.641+05:30  INFO 17577 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-05T11:00:30.641+05:30  INFO 17577 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-05T11:00:30.666+05:30  INFO 17577 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-05T11:00:30.666+05:30  INFO 17577 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 673 ms
+2025-02-05T11:00:31.168+05:30  INFO 17577 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-05T11:00:31.174+05:30  INFO 17577 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.481 seconds (process running for 1.695)
+2025-02-05T11:00:34.571+05:30  INFO 17577 --- [ems] [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-05T11:00:34.571+05:30  INFO 17577 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-05T11:00:34.572+05:30  INFO 17577 --- [ems] [http-nio-8080-exec-2] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-05T11:00:34.589+05:30  INFO 17577 --- [ems] [http-nio-8080-exec-2] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
+2025-02-05T11:00:34.589+05:30  INFO 17577 --- [ems] [http-nio-8080-exec-2] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-02-05T11:00:34.592+05:30 ERROR 17577 --- [ems] [http-nio-8080-exec-2] com.zaxxer.hikari.HikariConfig           : HikariPool-1 - jdbcUrl is required with driverClassName.
+2025-02-05T11:02:54.419+05:30  INFO 17577 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-05T11:02:54.425+05:30  INFO 17577 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-05T11:02:55.710+05:30  INFO 17617 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 17617 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-05T11:02:55.711+05:30  INFO 17617 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-05T11:02:56.359+05:30  INFO 17617 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-05T11:02:56.366+05:30  INFO 17617 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-05T11:02:56.366+05:30  INFO 17617 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-05T11:02:56.391+05:30  INFO 17617 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-05T11:02:56.391+05:30  INFO 17617 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 631 ms
+2025-02-05T11:02:56.861+05:30  INFO 17617 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-05T11:02:56.869+05:30  INFO 17617 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.405 seconds (process running for 1.626)
+2025-02-05T11:02:59.364+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-05T11:02:59.365+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-05T11:02:59.366+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-05T11:02:59.386+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
+2025-02-05T11:02:59.387+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-02-05T11:02:59.390+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-05T11:02:59.617+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2410d2f2
+2025-02-05T11:02:59.618+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-05T11:02:59.643+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
+2025-02-05T11:04:29.220+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : IN: Request to add a new employee with body body: NewEmployeeRequest(name=abcd, departmentId=1, phone=1212107000, joiningDate=2024-01-10, salary=15000.0)
+2025-02-05T11:04:29.222+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-5] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-02-05T11:04:29.254+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : OUT: Successfully added a new employee with body: NewEmployeeRequest(name=abcd, departmentId=1, phone=1212107000, joiningDate=2024-01-10, salary=15000.0)
+2025-02-05T11:04:47.983+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-6] c.d.ems.controller.EmployeeController    : IN: Request to add a new employee with body body: NewEmployeeRequest(name=abcdefg, departmentId=1, phone=1212007000, joiningDate=2024-01-10, salary=15000.0)
+2025-02-05T11:04:47.985+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-6] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-02-05T11:04:48.001+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-6] c.d.ems.controller.EmployeeController    : OUT: Successfully added a new employee with body: NewEmployeeRequest(name=abcdefg, departmentId=1, phone=1212007000, joiningDate=2024-01-10, salary=15000.0)
+2025-02-05T11:04:51.449+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-7] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
+2025-02-05T11:04:51.449+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-7] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-02-05T11:04:51.467+05:30  INFO 17617 --- [ems] [http-nio-8080-exec-7] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
+2025-02-05T11:10:28.247+05:30  INFO 17617 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-05T11:10:28.255+05:30  INFO 17617 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-05T11:10:28.259+05:30  INFO 17617 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-05T11:10:28.267+05:30  INFO 17617 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-05T11:10:30.262+05:30  INFO 17795 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 17795 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-05T11:10:30.264+05:30  INFO 17795 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-05T11:10:30.905+05:30  INFO 17795 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-05T11:10:30.913+05:30  INFO 17795 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-05T11:10:30.913+05:30  INFO 17795 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-05T11:10:30.937+05:30  INFO 17795 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-05T11:10:30.937+05:30  INFO 17795 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 622 ms
+2025-02-05T11:10:31.406+05:30  INFO 17795 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-05T11:10:31.412+05:30  INFO 17795 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.381 seconds (process running for 1.592)
+2025-02-05T11:10:35.425+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-05T11:10:35.426+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-05T11:10:35.427+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-05T11:10:40.621+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : IN: Request to add a new employee with body body: NewEmployeeRequest(name=abcdefgh, departmentId=1, phone=1212006000, joiningDate=2024-01-10, salary=15000.0)
+2025-02-05T11:10:40.624+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-4] com.deval.ems.service.EmployeeService    : Adding a new employee to the database
+2025-02-05T11:10:40.628+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-05T11:10:40.841+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-4] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1ede49ef
+2025-02-05T11:10:40.843+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-4] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-05T11:10:40.866+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : OUT: Successfully added a new employee with body: NewEmployeeRequest(name=abcdefgh, departmentId=1, phone=1212006000, joiningDate=2024-01-10, salary=15000.0)
+2025-02-05T11:10:51.277+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
+2025-02-05T11:10:51.278+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-5] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-02-05T11:10:51.283+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-05T11:10:51.390+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-5] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@437c1ec1
+2025-02-05T11:10:51.391+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-5] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-05T11:10:51.403+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-5] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
+2025-02-05T11:12:12.249+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-8] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
+2025-02-05T11:12:12.253+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-8] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-02-05T11:12:12.274+05:30  INFO 17795 --- [ems] [http-nio-8080-exec-8] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
+2025-02-05T11:12:49.969+05:30  INFO 17795 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-05T11:12:49.977+05:30  INFO 17795 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-05T11:12:49.980+05:30  INFO 17795 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-05T11:12:49.981+05:30  INFO 17795 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-05T11:12:49.981+05:30  INFO 17795 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-05T11:12:49.996+05:30  INFO 17795 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
