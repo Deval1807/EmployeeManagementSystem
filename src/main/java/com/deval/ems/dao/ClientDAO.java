@@ -35,10 +35,13 @@ public class ClientDAO {
 
     /**
      * Method to query the postgres DB and fetch all the clients
+     * @param pageNo the requested page no. of the response (for pagination)
+     * @param limit the size of the response (no of rows) (for pagination)
      * @return a list of client object
      */
-    public List<Client> getClientsFromPostgresDB() {
-        String sql = "SELECT * FROM clients";
-        return jdbcTemplate2.query(sql, new ClientRowMapper());
+    public List<Client> getClientsFromPostgresDB(int pageNo, int limit) {
+        int offset = (pageNo - 1)*limit;
+        String sql = "SELECT * FROM clients LIMIT ? OFFSET ?";
+        return jdbcTemplate2.query(sql, new Object[]{limit, offset}, new ClientRowMapper());
     }
 }
