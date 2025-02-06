@@ -2,7 +2,6 @@ package com.deval.ems.dao;
 
 import com.deval.ems.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
@@ -17,12 +16,7 @@ import java.util.Optional;
 public class EmployeeDAO {
 
     @Autowired
-    @Qualifier("jdbcTemplate1")
-    private JdbcTemplate jdbcTemplate1;
-
-    @Autowired
-    @Qualifier("jdbcTemplate2")
-    private JdbcTemplate jdbcTemplate2;
+    private JdbcTemplate jdbcTemplate;
 
     /**
      * This method maps the ResultSet(result from SQL operation) to Employee object
@@ -57,12 +51,8 @@ public class EmployeeDAO {
      * @return List of Employee objects
      */
     public List<Employee> findAll() {
-
-        // check for connection to postgres db
-        System.out.println("Check postgres connection: " + jdbcTemplate2.queryForObject("SELECT version()", String.class));
-
         String sql = "SELECT * FROM employees";
-        return jdbcTemplate1.query(sql, this::mapEmployeeRow);
+        return jdbcTemplate.query(sql, this::mapEmployeeRow);
     }
 
     /**
@@ -72,7 +62,7 @@ public class EmployeeDAO {
      */
     public Optional<Employee> findById(int id) {
         String sql = "SELECT * FROM employees WHERE emp_id = ?";
-        List<Employee> result = jdbcTemplate1.query(sql, new EmployeeRowMapper(), id);
+        List<Employee> result = jdbcTemplate.query(sql, new EmployeeRowMapper(), id);
         return result.isEmpty() ? Optional.empty() : Optional.of(result.get(0));
     }
 
@@ -84,7 +74,7 @@ public class EmployeeDAO {
     public String save(Employee employee) {
         String sql = "INSERT INTO employees (name, department_id, phone, joining_date, salary) VALUES (?, ?, ?, ?, ?)";
 
-        int rowsAffected = jdbcTemplate1.update(sql, employee.getName(), employee.getDepartment_id(), employee.getPhone(),
+        int rowsAffected = jdbcTemplate.update(sql, employee.getName(), employee.getDepartment_id(), employee.getPhone(),
                 employee.getJoining_date(), employee.getSalary());
 
         // Check if the insert was successful
@@ -139,7 +129,7 @@ public class EmployeeDAO {
         // add the employee id to params list
         params.add(id);
 
-        jdbcTemplate1.update(dynamicSql.toString(), params.toArray());
+        jdbcTemplate.update(dynamicSql.toString(), params.toArray());
     }
 
     /**
@@ -148,6 +138,6 @@ public class EmployeeDAO {
      */
     public void delete(Employee employee) {
         String sql = "DELETE FROM employees WHERE emp_id = ?";
-        jdbcTemplate1.update(sql, employee.getEmp_id());
+        jdbcTemplate.update(sql, employee.getEmp_id());
     }
 }

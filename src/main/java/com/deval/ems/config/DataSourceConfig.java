@@ -5,6 +5,7 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.boot.jdbc.DataSourceBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import javax.sql.DataSource;
@@ -39,6 +40,7 @@ public class DataSourceConfig {
      * This JdbcTemplate can be used to query on Database 1
      */
     @Bean(name = "jdbcTemplate1")
+    @Primary
     public JdbcTemplate jdbcTemplate1(@Qualifier("db1DataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
