@@ -29,15 +29,17 @@ public class ClientController {
      * Controller to handle the request to get all the clients
      * @param pageNo the requested page no. of the response (for pagination) default page = 1st page
      * @param limit the size of the response (no of rows) (for pagination) default size = 10 rows
+     * @param sortBy the parameter used to sort the result
      * @return a list of client objects
      */
     @GetMapping()
     public List<Client> getAllClients(
             @RequestParam(defaultValue = "1") int pageNo,
-            @RequestParam(defaultValue = "10") int limit
+            @RequestParam(defaultValue = "10") int limit,
+            @RequestParam(required = false, defaultValue = "+id") String sortBy
     ) {
         logger.info("IN: Request to fetch all clietns");
-        List<Client> clients = clientService.getAllClients(pageNo, limit);
+        List<Client> clients = clientService.getAllClients(pageNo, limit, sortBy);
         logger.info("OUT: Fetched all the clients");
         return clients;
     }

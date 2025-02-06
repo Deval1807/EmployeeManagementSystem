@@ -37,11 +37,18 @@ public class ClientDAO {
      * Method to query the postgres DB and fetch all the clients
      * @param pageNo the requested page no. of the response (for pagination)
      * @param limit the size of the response (no of rows) (for pagination)
+     * @param sortBy the parameter used to sort the result
      * @return a list of client object
      */
-    public List<Client> getClientsFromPostgresDB(int pageNo, int limit) {
+    public List<Client> getClientsFromPostgresDB(int pageNo, int limit, String sortBy) {
         int offset = (pageNo - 1)*limit;
-        String sql = "SELECT * FROM clients LIMIT ? OFFSET ?";
+
+        // sort by ascending if sortBy starts with '+' and descending if starts with '-'
+        String order = sortBy.startsWith("-") ? "DESC" : "ASC";;
+        String columnName = sortBy.substring(1);
+
+        String sql = "SELECT * FROM clients ORDER BY " + columnName + " " + order + " LIMIT ? OFFSET ?";
+
         return jdbcTemplate2.query(sql, new Object[]{limit, offset}, new ClientRowMapper());
     }
 }
