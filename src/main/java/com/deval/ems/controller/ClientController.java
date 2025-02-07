@@ -30,16 +30,18 @@ public class ClientController {
      * @param pageNo the requested page no. of the response (for pagination) default page = 1st page
      * @param limit the size of the response (no of rows) (for pagination) default size = 10 rows
      * @param sortBy the parameter used to sort the result
+     * @param searchName parameter to search a name in the DB
      * @return a list of client objects
      */
     @GetMapping()
     public List<Client> getAllClients(
             @RequestParam(defaultValue = "1") int pageNo,
             @RequestParam(defaultValue = "10") int limit,
-            @RequestParam(required = false, defaultValue = "+id") String sortBy
+            @RequestParam(required = false, defaultValue = "+id") String sortBy,
+            @RequestParam(required = false) String searchName
     ) {
         logger.info("IN: Request to fetch all clietns");
-        List<Client> clients = clientService.getAllClients(pageNo, limit, sortBy);
+        List<Client> clients = clientService.getAllClients(pageNo, limit, sortBy, searchName);
         logger.info("OUT: Fetched all the clients");
         return clients;
     }

@@ -21,11 +21,12 @@ public class ClientService {
      * @param pageNo the requested page no. of the response (for pagination)
      * @param limit the size of the response (no of rows) (for pagination)
      * @param sortBy the parameter used to sort the result
+     * @param searchName parameter to search a name in the DB
      * @return a list of client object
      */
-    public List<Client> getAllClients(int pageNo, int limit, String sortBy) {
+    public List<Client> getAllClients(int pageNo, int limit, String sortBy, String searchName) {
         logger.info("Getting all the clients");
-        return clientDAO.getClientsFromPostgresDB(pageNo, limit, sortBy);
+        return clientDAO.getClientsFromPostgresDB(pageNo, limit, sortBy, searchName);
     }
 
 }
