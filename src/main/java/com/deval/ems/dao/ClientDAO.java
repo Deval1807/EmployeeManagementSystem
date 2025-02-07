@@ -1,7 +1,6 @@
 package com.deval.ems.dao;
 
 import com.deval.ems.model.Client;
-import com.deval.ems.model.Employee;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -17,22 +16,8 @@ import java.util.List;
 public class ClientDAO {
 
     @Autowired
-    @Qualifier("jdbcTemplate2")
-    private JdbcTemplate jdbcTemplate2;
-
-    /**
-     * This method maps the ResultSet(result from SQL operation) to Client object
-     */
-    private static final class ClientRowMapper implements RowMapper<Client> {
-        @Override
-        public Client mapRow(ResultSet rs, int rowNum) throws SQLException {
-            return new Client(
-                    rs.getInt("id"),
-                    rs.getString("name"),
-                    rs.getString("location")
-            );
-        }
-    }
+    @Qualifier("postgresClientsJdbcTemplate")
+    private JdbcTemplate postgresClientsJdbcTemplate;
 
     /**
      * Method to query the postgres DB and fetch all the clients
@@ -66,6 +51,12 @@ public class ClientDAO {
         params.add(limit);
         params.add(offset);
 
-        return jdbcTemplate2.query(sqlBuilder.toString(), params.toArray(), new ClientRowMapper());
+        return postgresClientsJdbcTemplate.query(sqlBuilder.toString(), params.toArray(),
+                (rs, rowNum) -> new Client(
+                        rs.getInt("id"),
+                        rs.getString("name"),
+                        rs.getString("location")
+                )
+        );
     }
 }

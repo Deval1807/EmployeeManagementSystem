@@ -16,7 +16,7 @@ import java.util.Optional;
 public class EmployeeDAO {
 
     @Autowired
-    private JdbcTemplate jdbcTemplate;
+    private JdbcTemplate mysqlEmsJdbcTemplate;
 
     /**
      * This method maps the ResultSet(result from SQL operation) to Employee object
@@ -52,7 +52,7 @@ public class EmployeeDAO {
      */
     public List<Employee> findAll() {
         String sql = "SELECT * FROM employees";
-        return jdbcTemplate.query(sql, this::mapEmployeeRow);
+        return mysqlEmsJdbcTemplate.query(sql, this::mapEmployeeRow);
     }
 
     /**
@@ -62,7 +62,7 @@ public class EmployeeDAO {
      */
     public Optional<Employee> findById(int id) {
         String sql = "SELECT * FROM employees WHERE emp_id = ?";
-        List<Employee> result = jdbcTemplate.query(sql, new EmployeeRowMapper(), id);
+        List<Employee> result = mysqlEmsJdbcTemplate.query(sql, new EmployeeRowMapper(), id);
         return result.isEmpty() ? Optional.empty() : Optional.of(result.get(0));
     }
 
@@ -74,7 +74,7 @@ public class EmployeeDAO {
     public String save(Employee employee) {
         String sql = "INSERT INTO employees (name, department_id, phone, joining_date, salary) VALUES (?, ?, ?, ?, ?)";
 
-        int rowsAffected = jdbcTemplate.update(sql, employee.getName(), employee.getDepartment_id(), employee.getPhone(),
+        int rowsAffected = mysqlEmsJdbcTemplate.update(sql, employee.getName(), employee.getDepartment_id(), employee.getPhone(),
                 employee.getJoining_date(), employee.getSalary());
 
         // Check if the insert was successful
@@ -129,7 +129,7 @@ public class EmployeeDAO {
         // add the employee id to params list
         params.add(id);
 
-        jdbcTemplate.update(dynamicSql.toString(), params.toArray());
+        mysqlEmsJdbcTemplate.update(dynamicSql.toString(), params.toArray());
     }
 
     /**
@@ -138,6 +138,6 @@ public class EmployeeDAO {
      */
     public void delete(Employee employee) {
         String sql = "DELETE FROM employees WHERE emp_id = ?";
-        jdbcTemplate.update(sql, employee.getEmp_id());
+        mysqlEmsJdbcTemplate.update(sql, employee.getEmp_id());
     }
 }

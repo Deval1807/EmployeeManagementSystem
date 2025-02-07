@@ -35,3 +35,61 @@
 2025-02-07T10:00:28.755+05:30  INFO 13695 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
 2025-02-07T10:00:28.757+05:30  INFO 13695 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
 2025-02-07T10:00:28.758+05:30  INFO 13695 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-07T10:10:07.473+05:30  INFO 14057 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 14057 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-07T10:10:07.474+05:30  INFO 14057 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-07T10:10:08.164+05:30  INFO 14057 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-07T10:10:08.172+05:30  INFO 14057 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-07T10:10:08.172+05:30  INFO 14057 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-07T10:10:08.196+05:30  INFO 14057 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-07T10:10:08.197+05:30  INFO 14057 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 670 ms
+2025-02-07T10:10:08.678+05:30  INFO 14057 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-07T10:10:08.684+05:30  INFO 14057 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.46 seconds (process running for 1.674)
+2025-02-07T10:10:18.416+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07T10:10:18.417+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-07T10:10:18.417+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2025-02-07T10:10:18.440+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : IN: Request to fetch all employees
+2025-02-07T10:10:18.440+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.EmployeeService    : Querying DB to find all employees
+2025-02-07T10:10:18.444+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-07T10:10:18.756+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@70f5a654
+2025-02-07T10:10:18.759+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-07T10:10:18.798+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : OUT: Successfully fetched all the employees
+2025-02-07T10:10:23.767+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : IN: Request to fetch all clietns
+2025-02-07T10:10:23.767+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.ClientService      : Getting all the clients
+2025-02-07T10:10:23.769+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Starting...
+2025-02-07T10:10:23.870+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-3] com.zaxxer.hikari.pool.HikariPool        : HikariPool-2 - Added connection org.postgresql.jdbc.PgConnection@36fb3490
+2025-02-07T10:10:23.870+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-3] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Start completed.
+2025-02-07T10:10:23.876+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : OUT: Fetched all the clients
+2025-02-07T10:10:27.932+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : IN: Request to fetch all clietns
+2025-02-07T10:10:27.934+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-4] com.deval.ems.service.ClientService      : Getting all the clients
+2025-02-07T10:10:27.946+05:30  INFO 14057 --- [ems] [http-nio-8080-exec-4] c.d.ems.controller.EmployeeController    : OUT: Fetched all the clients
+2025-02-07T10:12:58.489+05:30  INFO 14057 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-07T10:12:58.494+05:30  INFO 14057 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-07T10:12:58.497+05:30  INFO 14057 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-07T10:12:58.501+05:30  INFO 14057 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-02-07T10:12:58.502+05:30  INFO 14057 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown initiated...
+2025-02-07T10:12:58.502+05:30  INFO 14057 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-2 - Shutdown completed.
+2025-02-07T10:13:00.342+05:30  INFO 14111 --- [ems] [main] com.deval.ems.EmsApplication             : Starting EmsApplication using Java 23.0.1 with PID 14111 (/Users/devaldarji/Desktop/EmployeeManagementSystem/target/classes started by devaldarji in /Users/devaldarji/Desktop/EmployeeManagementSystem)
+2025-02-07T10:13:00.344+05:30  INFO 14111 --- [ems] [main] com.deval.ems.EmsApplication             : No active profile set, falling back to 1 default profile: "default"
+2025-02-07T10:13:01.018+05:30  INFO 14111 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 8080 (http)
+2025-02-07T10:13:01.026+05:30  INFO 14111 --- [ems] [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-02-07T10:13:01.026+05:30  INFO 14111 --- [ems] [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.33]
+2025-02-07T10:13:01.050+05:30  INFO 14111 --- [ems] [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-02-07T10:13:01.050+05:30  INFO 14111 --- [ems] [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 657 ms
+2025-02-07T10:13:01.520+05:30  INFO 14111 --- [ems] [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 8080 (http) with context path '/'
+2025-02-07T10:13:01.526+05:30  INFO 14111 --- [ems] [main] com.deval.ems.EmsApplication             : Started EmsApplication in 1.424 seconds (process running for 1.633)
+2025-02-07T10:13:07.095+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-02-07T10:13:07.095+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-02-07T10:13:07.096+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2025-02-07T10:13:07.116+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : IN: Request to fetch all clietns
+2025-02-07T10:13:07.116+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] com.deval.ems.service.ClientService      : Getting all the clients
+2025-02-07T10:13:07.120+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-02-07T10:13:07.225+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@36aa6410
+2025-02-07T10:13:07.226+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-02-07T10:13:07.239+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-1] c.d.ems.controller.EmployeeController    : OUT: Fetched all the clients
+2025-02-07T10:13:12.760+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : IN: Request to fetch all clietns
+2025-02-07T10:13:12.761+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-3] com.deval.ems.service.ClientService      : Getting all the clients
+2025-02-07T10:13:12.772+05:30  INFO 14111 --- [ems] [http-nio-8080-exec-3] c.d.ems.controller.EmployeeController    : OUT: Fetched all the clients
+2025-02-07T10:13:36.717+05:30  INFO 14111 --- [ems] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-02-07T10:13:36.722+05:30  INFO 14111 --- [ems] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-02-07T10:13:36.724+05:30  INFO 14111 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-02-07T10:13:36.726+05:30  INFO 14111 --- [ems] [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.

@@ -18,8 +18,8 @@ public class DataSourceConfig {
      * This method reads the DB configuration with a given prefix (spring.datasource.db1)
      * and creates a DataSource object and returns it
      */
-    @Bean(name = "db1DataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.db1")
+    @Bean(name = "mysqlDataSource")
+    @ConfigurationProperties(prefix = "mysql.ems.database")
     public DataSource db1DataSource(){
         return DataSourceBuilder.create().build();
     }
@@ -29,28 +29,28 @@ public class DataSourceConfig {
      * This method reads the DB configuration with a given prefix (spring.datasource.db2)
      * and creates a DataSource object and returns it
      */
-    @Bean(name = "db2DataSource")
-    @ConfigurationProperties(prefix = "spring.datasource.db2")
+    @Bean(name = "postgresDataSource")
+    @ConfigurationProperties(prefix = "postgres.clients.database")
     public DataSource db2DataSource(){
         return DataSourceBuilder.create().build();
     }
 
     /**
-     * This method uses the "db1DataSource" bean (using @Qualifier) and creates a JdbcTemplate
-     * This JdbcTemplate can be used to query on Database 1
+     * This method uses the "mysqlDataSource" bean (using @Qualifier) and creates a JdbcTemplate
+     * This JdbcTemplate can be used to query on Database 1 - mysql
      */
-    @Bean(name = "jdbcTemplate1")
+    @Bean(name = "mysqlEmsJdbcTemplate")
     @Primary
-    public JdbcTemplate jdbcTemplate1(@Qualifier("db1DataSource") DataSource dataSource) {
+    public JdbcTemplate mysqlEmsJdbcTemplate(@Qualifier("mysqlDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 
     /**
-     * This method uses the "db2DataSource" bean (using @Qualifier) and creates a JdbcTemplate
-     * This JdbcTemplate can be used to query on Database 2
+     * This method uses the "postgresDataSource" bean (using @Qualifier) and creates a JdbcTemplate
+     * This JdbcTemplate can be used to query on Database 2 - postgres
      */
-    @Bean(name = "jdbcTemplate2")
-    public JdbcTemplate jdbcTemplate2(@Qualifier("db2DataSource") DataSource dataSource) {
+    @Bean(name = "postgresClientsJdbcTemplate")
+    public JdbcTemplate postgresClientsJdbcTemplate(@Qualifier("postgresDataSource") DataSource dataSource) {
         return new JdbcTemplate(dataSource);
     }
 
